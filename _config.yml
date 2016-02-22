@@ -2,14 +2,21 @@
 markdown:         kramdown
 highlighter:      rouge
 
-# Permalinks
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Settings
 permalink:        pretty
 paginate:         5
+sass:
+  style: compressed
 
 # Setup
 title:            Skye
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/connor_baer" target="_blank">@connor_baer</a>.'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Customized by <a href="https://twitter.com/connor_baer" target="_blank">@connor_baer</a>.'
 url:              http://skye.connorbaer.io
 baseurl:          /
 
