@@ -1,9 +1,10 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
+paginate:         5
 
 # Setup
 title:            Skye
