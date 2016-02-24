@@ -20,7 +20,7 @@ tagline:              'A Jekyll theme'
 keywords:             'skye, jekyll, template, github, project, single page, one page'
 description:          'A one-page, two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. Adapted by @connor_baer.'
 url:                  http://skye.connorbaer.io
-baseurl:              ''
+baseurl:              /
 
 ## replace analytics key below to enable tracking, leave blank to disable
 google_analytics_key: UA-37412525-4 
