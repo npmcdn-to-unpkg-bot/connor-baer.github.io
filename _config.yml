@@ -1,33 +1,41 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      rouge
+markdown:             kramdown
+highlighter:          rouge
+
 
 # Gems
 gems:
   - jekyll-sitemap
-  - jekyll-paginate
+
 
 # Settings
-permalink:        pretty
-paginate:         5
+exclude:              [CNAME, README.md, .gitignore]
 sass:
-  style: compressed
+  style:              compressed
 
-# Setup
-title:            Skye
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Customized by <a href="https://twitter.com/connor_baer" target="_blank">@connor_baer</a>.'
-url:              http://skye.connorbaer.io
-baseurl:          /
+
+# Site meta
+title:                Skye
+tagline:              'A Jekyll theme'
+keywords:             'skye, jekyll, template, github, project, single page, one page'
+description:          'A one-page, two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. Adapted by @connor_baer.'
+url:                  http://skye.connorbaer.io
+baseurl:              ''
+
+## replace analytics key below to enable tracking, leave blank to disable
+google_analytics_key: UA-37412525-4 
 
 author:
-  name:           'Connor Bär'
-  url:            https://twitter.com/connor_baer
+  name:               'Connor Bär'
+  url:                'http://connorbaer.io'
+  medium:             https://twitter.com/connor_baer
+  github:             https://github.com/connor-baer
+  twitter:            https://twitter.com/connor_baer
+  facebook:           
+  instagram:          https://instagram.com/connor_baer
+  snapchat:           
 
-paginate:         5
-
-# Custom vars
-version:          1.0.0
+version:              0.9.0-beta
 
 github:
-  repo:           https://github.com/connor-baer/skye
+  repo:               https://github.com/connor-baer/skye
