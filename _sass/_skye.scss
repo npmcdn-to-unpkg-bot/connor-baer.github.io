@@ -83,10 +83,22 @@ html {
 .navigation {
   z-index: 9999;
   position: absolute;
-  left: 2rem;
-  right: 2rem;
+  left: 5rem;
+  right: 3rem;
   color: #000;
-  padding: 2rem;
+  padding: 1.5rem;
+  height: 4.5rem;
+}
+@media (min-width: 48em) {
+  .navigation {
+    left: 21rem;
+    background-color: white;
+  }
+}
+@media (min-width: 64em) {
+  .content {
+    left: 23rem;
+  }
 }
 
 /* Navigation items */
@@ -96,7 +108,9 @@ html {
 }
 
 #navbar li {
-  margin-left: 2rem;
+  margin-left: 2.5rem;
+  font-family: $mono;
+  font-size: 0.75rem;
 }
 
 a.nav-item:hover,
@@ -124,7 +138,7 @@ a.nav-item:focus {
 }
 
 .sidecontainer {
-  padding: 2rem 1rem;
+  padding: 1.75rem;
   color: rgba(255,255,255,0.75);
   background-color: rgba($sidebar-color, 0.5);
   z-index: 88888;
@@ -142,7 +156,7 @@ a.nav-item:focus {
 
 /* Logo */
 .sidebar-logo {
-  margin: 0 0 5rem 1rem;
+  margin: 0 0 5rem 0;
 }
 
 .logo {
@@ -151,6 +165,12 @@ a.nav-item:focus {
   background-position: center;
   height: 2.75rem;
   width: 2.75rem;
+  transition: opacity 0.2s linear;
+}
+
+.logo:hover,
+.logo:focus {
+  opacity: 0.75;
 }
 
 /* Sidebar links */
@@ -166,6 +186,18 @@ a.nav-item:focus {
   font-size: 3rem;
 }
 
+/* Social links */
+
+#social li {
+  font-family: $mono;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+.social-separator:last-child {
+  display: none;
+}
+
 
 
 /* Sticky sidebar
@@ -177,9 +209,9 @@ a.nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
+    right:  1.75rem;
+    bottom: 1.75rem;
+    left:   1.75rem;
   }
 }
 
@@ -191,12 +223,13 @@ a.nav-item:focus {
  */
 
 .content {
-  padding-top:    7rem;
-  padding-bottom: 3rem;
+  padding-top:    3rem;
+  padding-bottom: 2.75rem;
 }
 
 @media (min-width: 48em) {
   .content {
+    padding-top: 7rem;
     max-width: 38rem;
     margin-left: 21rem;
     margin-right: 2rem;
@@ -233,6 +266,12 @@ p, li {
   font-size: 1.1rem;
 }
 
+.footer {
+  font-family: $mono;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+}
+
 
 /*
  * Reverse layout
@@ -259,84 +298,3 @@ p, li {
 }
 
 
-
-/*
- * Themes
- *
- * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
- */
-
-/* Base16 (http://chriskempson.github.io/base16/#default) */
-
-/* Red */
-.theme-base-08 .sidebar {
-  background-color: #ac4142;
-}
-.theme-base-08 .content a,
-.theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
-}
-
-/* Orange */
-.theme-base-09 .sidebar {
-  background-color: #d28445;
-}
-.theme-base-09 .content a,
-.theme-base-09 .related-posts li a:hover {
-  color: #d28445;
-}
-
-/* Yellow */
-.theme-base-0a .sidebar {
-  background-color: #f4bf75;
-}
-.theme-base-0a .content a,
-.theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
-}
-
-/* Green */
-.theme-base-0b .sidebar {
-  background-color: #90a959;
-}
-.theme-base-0b .content a,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
-
-/* Cyan */
-.theme-base-0c .sidebar {
-  background-color: #75b5aa;
-}
-.theme-base-0c .content a,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
-
-/* Blue */
-.theme-base-0d .sidebar {
-  background-color: #6a9fb5;
-}
-.theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
-
-/* Magenta */
-.theme-base-0e .sidebar {
-  background-color: #aa759f;
-}
-.theme-base-0e .content a,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
-/* Brown */
-.theme-base-0f .sidebar {
-  background-color: #8f5536;
-}
-.theme-base-0f .content a,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
-}

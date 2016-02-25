@@ -9,6 +9,7 @@ gems:
 
 
 # Settings
+navigation:           true
 exclude:              [CNAME, README.md, .gitignore]
 sass:
   style:              compressed
@@ -18,9 +19,9 @@ sass:
 title:                Skye
 tagline:              'A Jekyll theme'
 keywords:             'skye, jekyll, template, github, project, single page, one page'
-description:          'A one-page, two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. Adapted by @connor_baer.'
+description:          'A one-page, two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. Made by @connor_baer.'
 url:                  http://skye.connorbaer.io
-baseurl:              /
+baseurl:              ''
 
 ## replace analytics key below to enable tracking, leave blank to disable
 google_analytics_key: UA-37412525-4 
@@ -28,6 +29,9 @@ google_analytics_key: UA-37412525-4
 author:
   name:               'Connor Bär'
   url:                'http://connorbaer.io'
+
+## outputs the social links in the sidebar, leave url blank to omit a social network, re-arrange to change order
+social:
   medium:             https://twitter.com/connor_baer
   github:             https://github.com/connor-baer
   twitter:            https://twitter.com/connor_baer

@@ -4,12 +4,16 @@
   {% include head.html %}
 
   <body>
+    {% unless site.navigation == false %}
+  		{% include navigation.html %}
+	{% endunless %}
 
-  	{% include navigation.html %}
     {% include sidebar.html %}
 
     <div class="content container">
-      {{ content }}
+		{{ content }}
+
+		<span class="footer">The <a href="http://skye.connorbaer.io">Skye</a> theme <a href="https://github.com/connor-baer/skye">v{{ site.version }}</a>. &copy; {{ site.time | date: '%Y' }}. All rights reserved.</span>
     </div>
 
   {% include analytics.html %}
