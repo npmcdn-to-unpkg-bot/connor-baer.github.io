@@ -49,9 +49,9 @@ social:
 nav_items:
   Skye:               http://skye.connorbaer.io
   UWC Bloglist:       http://connorbaer.io/uwc-bloglist
-  Waterford:          https://waterford.sz
+  Waterford:          http://waterford.connorbaer.io
 
-version:              2.0.0
+version:              1.0.0
 
 github:
   repo:               https://github.com/connor-baer/connor-baer.github.io
