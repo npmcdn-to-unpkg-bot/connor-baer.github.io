@@ -1,8 +1,11 @@
-<div id="sidebar">
+<div id="sidebar" style="background-image: url({{site.baseurl}}{{site.image}});">
   <div class="sidecontainer">
+    {% if site.logo %}
     <div class="sidebar-logo">
-      <a href="http://connorbaer.io/"><div class="logo"></div></a>
+      <a href="http://connorbaer.io/"><div class="logo" style="background-image: url({{site.baseurl}}{{site.logo}});
+"></div></a>
     </div>
+    {% endif %}
     <div class="sidebar-sticky">
       <div class="sidebar-about">
         <h1>

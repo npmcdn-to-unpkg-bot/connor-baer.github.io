@@ -1,0 +1,34 @@
+{
+  "name": "connorbaer",
+  "version": "1.0.0",
+  "description": "Designer, developer, traveller and sushi-lover.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connor-baer/connor-baer.github.io.git"
+  },
+  "keywords": [
+    "connor",
+    "bär",
+    "designer",
+    "traveller",
+    "code",
+    "jekyll",
+    "developer"
+  ],
+  "author": "Connor Bär",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connor-baer/connor-baer.github.io/issues"
+  },
+  "homepage": "https://connorbaer.io",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "gulp-watch": "^4.3.5"
+  }
+}

@@ -6,40 +6,65 @@ highlighter:          rouge
 # Gems
 gems:
   - jekyll-sitemap
+  - jekyll-gist
 
 
 # Settings
 navigation:           true
-exclude:              [CNAME, README.md, .gitignore]
+headroom:             true
+color:                '#6a9fb5'
+exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
+  sass_dir:           _sass
   style:              compressed
 
 
 # Site meta
-title:                Skye
-tagline:              'A Jekyll theme'
-keywords:             'skye, jekyll, template, github, project, single page, one page'
-description:          'A one-page, two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. Made by @connor_baer.'
-url:                  http://skye.connorbaer.io
+title:                Connor Bär
+tagline:              'Designer, developer, traveller and sushi-lover.'
+keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, for hire'
+description:          'Designer, developer, traveller and sushi-lover. The best way to predict the future is to create it.'
+image:                /assets/main.jpg
+logo:                 /assets/logo.png
+url:                  http://connorbaer.io
 baseurl:              ''
 
 ## replace analytics key below to enable tracking, leave blank to disable
 google_analytics_key: UA-37412525-4 
 
 author:
-  name:               'Connor Bär'
-  url:                'http://connorbaer.io'
+  name:               Connor Bär
+  url:                http://connorbaer.io
+  email:              hello@connorbaer.io
+  twitter:            connor_baer
 
-## outputs the social links in the sidebar, leave url blank to omit a social network, re-arrange to change order
+## Outputs the social links in the sidebar. Remove, add and re-arrange to your convenience. Keep below 5 links for best results.
 social:
-  medium:             https://twitter.com/connor_baer
+  medium:             https://medium.com/@connor_baer
   github:             https://github.com/connor-baer
   twitter:            https://twitter.com/connor_baer
-  facebook:           
   instagram:          https://instagram.com/connor_baer
-  snapchat:           
 
-version:              0.9.0-beta
+## Allows you to add external links to the navbar. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
+nav_items:
+  Skye:               http://skye.connorbaer.io
+  UWC Bloglist:       http://connorbaer.io/uwc-bloglist
+  Waterford:          https://waterford.sz
+
+version:              2.0.0
 
 github:
-  repo:               https://github.com/connor-baer/skye
+  repo:               https://github.com/connor-baer/connor-baer.github.io
+
+
+# /* Predefined theme colors */
+# $red: #ac4142;
+# $orange: #d28445;
+# $yellow: #f4bf75;
+# $green: #90a959;
+# $cyan: #75b5aa;
+# $blue: #268bd2;
+# // $blue: #6a9fb5;
+# $brown: #8f5536;
+
+# /* Set your colors here. You can use the predefined colors from above. */
