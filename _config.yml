@@ -7,6 +7,7 @@ highlighter:          rouge
 gems:
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-redirect-from
 
 
 # Settings
@@ -48,8 +49,8 @@ social:
 ## Allows you to add external links to the navbar. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
 nav_items:
   Skye:               http://skye.connorbaer.io
-  UWC Bloglist:       http://connorbaer.io/uwc-bloglist
-  Waterford:          https://waterford.sz
+  UWC Bloglist:       http://uwcblogs.com
+  Waterford:          http://waterford.connorbaer.io
 
 version:              2.0.0
 
