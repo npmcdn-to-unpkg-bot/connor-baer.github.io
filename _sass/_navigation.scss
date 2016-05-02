@@ -1,0 +1,21 @@
+.navigation {
+	background-color: #fff;
+	height: 3.5rem;
+	color: $primary-darker;
+	border-bottom: 2px solid $primary;
+}
+
+.navigation-links {
+	padding-top: 1rem;
+}
+
+.navigation-item {
+	text-transform: uppercase;
+	font-weight: $bold;
+	margin-right: 1.5rem;
+	letter-spacing: 0.1rem;
+}
+
+.navigation-item#active {
+	text-decoration: underline;
+}

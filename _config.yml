@@ -13,7 +13,11 @@ gems:
 # Settings
 navigation:           true
 headroom:             true
-color:                '#6a9fb5'
+color:                
+  primary:            '#F43530'
+  primary-darker:     '#E9140C'
+  primary-lighter:    '#F65651'
+  primary-lighterer:  '#F87C77'
 exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
   sass_dir:           _sass
@@ -22,9 +26,9 @@ sass:
 
 # Site meta
 title:                Connor Bär
-tagline:              'Designer, developer, traveller and sushi-lover.'
-keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, for hire'
-description:          'Designer, developer, traveller and sushi-lover. The best way to predict the future is to create it.'
+tagline:              'Designer, developer & traveller. Embrace change.'
+keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
+description:          'I design and develop websites. Also I am a perfectionist, idealist and a firm believer in change. Currently working for Deutsche Stiftung UWC.'
 image:                /assets/main.jpg
 logo:                 /assets/logo.png
 url:                  http://connorbaer.io
@@ -48,11 +52,11 @@ social:
 
 ## Allows you to add external links to the navbar. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
 nav_items:
-  Skye:               http://skye.connorbaer.io
-  UWC Bloglist:       http://uwcblogs.com
-  Waterford:          http://waterford.connorbaer.io
+  Medium:             https://medium.com/@connor_baer
+  Twitter:            https://twitter.com/connor_baer
+  Github:             https://github.com/connor-baer
 
-version:              1.0.0
+version:              2.0.0
 
 github:
   repo:               https://github.com/connor-baer/connor-baer.github.io
