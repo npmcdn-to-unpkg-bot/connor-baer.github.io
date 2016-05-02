@@ -1,0 +1,51 @@
+.social {
+	padding-top: 1rem;
+	height: 6rem;
+	background-color: $primary;
+}
+
+.social-logo {
+	float: left;
+}
+
+.social-bear {
+	width: 4rem;
+	height: 4rem;
+	&:hover path, &:focus path {
+		opacity: 0.8;
+	}
+}
+
+.social-links {
+	float: right;
+	padding: 0.75rem 0;
+}
+
+.social-icon {
+	height: 2.5rem;
+	width: 2.5rem;
+	padding: 0.5rem;
+	fill: #fff;
+	margin-left: 1.5rem;
+	border: 2px solid transparent;
+	transition: border 0.2s ease-in-out;
+	&:hover, &:focus {
+		border: 2px solid white;
+	}
+}
+
+@media (max-width: $phone) {
+	.social-links {
+		padding: 0.5rem 0;
+	}
+	.social-icon {
+		height: 3rem;
+		width: 3rem;
+	}
+}
+
+.social path {
+	transition: opacity 0.2s ease-in-out;
+	opacity: 1;
+	fill: #fff;
+}

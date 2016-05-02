@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+<body>
+	<div class="body-wrapper">
+	  	<header>
+	    	{% include social.html %}
+
+	    	<article class="content ctnr-golden">
+		        <h1 class="title">
+		        	{{ site.title }}
+		        </h1>
+		        <h6 class="description lead">I am a perfectionist, idealist and a firm believer in change who happens to design and develop websites. Currently working for <a href="http://uwc.de" class="strong white">Deutsche Stiftung UWC</a>.</h6>
+	    	</article>
+	    </header>
+	    {% include navigation.html %}
+
+	    <aside>
+	    	
+	    </aside>
+	<!-- 	<footer>The <a href="http://skye.connorbaer.io">Skye</a> theme <a href="https://github.com/connor-baer/skye">v{{ site.version }}</a>. &copy; {{ site.time | date: '%Y' }}. All rights reserved. <a href="{{site.github.repo}}/edit/master/{{page.path}}">Edit this page</a>.</footer> -->
+
+	    {% include analytics.html %}
+    </div>
+</body>
+</html>
