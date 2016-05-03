@@ -9,14 +9,14 @@
 }
 
 .navigation-item {
+	font-family: $condensed;
+	font-size: 1.2rem;
 	text-transform: uppercase;
-	font-weight: $bold;
-	margin-right: 1.5rem;
-	letter-spacing: 0.1rem;
+	margin-right: 2rem;
+	letter-spacing: 0.05rem;
 	padding: 1rem 0;
-	position: relative;
 	color: $gray-80;
-	 transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
 	&:hover,
 	&:focus {
 		color: $primary;
