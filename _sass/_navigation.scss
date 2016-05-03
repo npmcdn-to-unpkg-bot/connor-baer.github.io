@@ -15,9 +15,14 @@
 	letter-spacing: 0.1rem;
 	padding: 1rem 0;
 	position: relative;
-	color: $primary;
+	color: $gray-80;
+	 transition: color 0.2s ease-in-out;
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
 }
 
 .navigation-item#active {
-	color: $gray-70;
+	color: $primary;
 }

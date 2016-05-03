@@ -1,0 +1,29 @@
+footer {
+	background-color: $primary;
+	width: 100%;
+}
+
+.footer-content {
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
+	color: #fff;
+}
+
+.footer-phonetic {
+	font-family: $header;
+	font-size: 0.866rem;
+	color: $gray-5;
+}
+
+.footer-definition {
+	font-family: $header;
+}
+
+.footer-legal {
+	margin-top: 1.5rem;
+	padding-top: 0.5rem;
+	font-family: $header;
+	font-size: 0.866rem;
+	color: $gray-5;
+	border-top: 1px solid #fff;
+}
