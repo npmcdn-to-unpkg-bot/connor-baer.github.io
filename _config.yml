@@ -14,10 +14,10 @@ gems:
 navigation:           true
 headroom:             true
 color:                
-  primary:            '#F43530'
-  primary-darker:     '#E9140C'
-  primary-lighter:    '#F65651'
-  primary-lighterer:  '#F87C77'
+  primary:            '#0000FF'
+  primary-darker:     '#0000E0'
+  primary-lighter:    '#3333FF'
+  primary-lighterer:  '#5C5CFF'
 exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
   sass_dir:           _sass

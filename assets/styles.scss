@@ -25,16 +25,16 @@ $primary-darker: {{site.color.primary-darker}};
 $primary-lighter: {{site.color.primary-lighter}};
 $primary-lighterer: {{site.color.primary-lighterer}};
 
-$gray-5: #F5F5F5;
-$gray-70: #474748;
-$gray-80: #292829;
-$gray-90: #141415;
+$gray-5: #EBEAEB;
+$gray-70: #5B5B5D;
+$gray-80: #333234;
+$gray-90: #0A0A0A;
 
 /* These colors control individual parts of the website. For convenience some are linked to the main colors above, but feel free to adjust them independently. */
 $body-color: $gray-90;
 $body-bg: $primary;
 $link-color: $primary;
-$border-color: #e5e5e5;
+$border-color: $gray-5;
 $code-color: #bf616a;
 
 
