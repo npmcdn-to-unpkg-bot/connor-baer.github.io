@@ -1,7 +1,6 @@
 .navigation {
 	background-color: #fff;
 	height: 3.5rem;
-	color: $primary-darker;
 	border-bottom: 2px solid $primary;
 }
 
@@ -14,8 +13,11 @@
 	font-weight: $bold;
 	margin-right: 1.5rem;
 	letter-spacing: 0.1rem;
+	padding: 1rem 0;
+	position: relative;
+	color: $primary;
 }
 
 .navigation-item#active {
-	text-decoration: underline;
+	color: $gray-70;
 }
