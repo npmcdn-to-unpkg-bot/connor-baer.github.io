@@ -1,13 +1,13 @@
 // Typography
 /* Headings, body text, lists, and other misc typographic elements. */
 
-h1, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   margin-bottom: 0.5rem;
   margin-top: 0;
-  font-weight: $bold;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
-  font-family: $header;
+  font-family: $condensed;
+  letter-spacing: 0.05rem;
 }
 
 h1 {
@@ -16,7 +16,6 @@ h1 {
 
 h2 {
   font-size: 3.011rem;
-  font-family: $ornamental;
   text-align: center;
 }
 
@@ -34,17 +33,18 @@ h5 {
 
 h6 {
   font-size: 1.444rem;
-}
-
-h6.lead {
-  font-weight: $normal;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
   line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  font-family: $sans-serif;
+  font-weight: $normal;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: $body;
+  font-family: $serif;
 }
 
 a {
