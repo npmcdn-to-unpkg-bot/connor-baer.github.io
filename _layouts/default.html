@@ -8,7 +8,14 @@
 		{% include social.html %}
 
 		{{ content }}
-<!-- 		<footer>The <a href="http://skye.connorbaer.io">Skye</a> theme <a href="https://github.com/connor-baer/skye">v{{ site.version }}</a>. &copy; {{ site.time | date: '%Y' }}. All rights reserved. <a href="{{site.github.repo}}/edit/master/{{page.path}}">Edit this page</a>.</footer> -->
+
+		<footer id="footer" class="invert">
+			<div class="footer-content ctnr-golden">
+				<h6 class="lead">*dig·it·al no·mad <span class="footer-phonetic"> /ˈdijidl  ˈnōˌmad/</span></h6>
+				<p class="footer-definition">Digital nomads are people who are location independent and use technology to perform their job. <a class="link strong" href=" https://www.wikiwand.com/en/Digital_nomad">Learn more →</a>
+				<p class="footer-legal">&copy; {{ site.time | date: '%Y' }} Connor Bär. All rights reserved.</p>
+			</div>
+		</footer>
 
 	    {% include analytics.html %}
     </div>

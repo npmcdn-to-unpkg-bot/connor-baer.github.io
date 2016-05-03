@@ -11,8 +11,6 @@ gems:
 
 
 # Settings
-navigation:           true
-headroom:             true
 color:                
   primary:            '#0000FF'
   primary-darker:     '#0000E0'
@@ -25,12 +23,10 @@ sass:
 
 
 # Site meta
-title:                Connor Bär
+title:                Hello! I'm Connor.
 tagline:              'Designer, developer & traveller. Embrace change.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
-description:          'I design and develop websites. Also I am a perfectionist, idealist and a firm believer in change. Currently working for Deutsche Stiftung UWC.'
-image:                /assets/main.jpg
-logo:                 /assets/logo.png
+description:          'I am a <a data-scroll href="#footer" class="strong link">digital nomad*</a> currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for <a href="http://uwc.de" class="strong link">Deutsche Stiftung UWC</a>.'
 url:                  http://connorbaer.io
 baseurl:              ''
 
@@ -43,33 +39,13 @@ author:
   email:              hello@connorbaer.io
   twitter:            connor_baer
 
-## Outputs the social links in the sidebar. Remove, add and re-arrange to your convenience. Keep below 5 links for best results.
-social:
-  medium:             https://medium.com/@connor_baer
-  github:             https://github.com/connor-baer
-  twitter:            https://twitter.com/connor_baer
-  instagram:          https://instagram.com/connor_baer
-
-## Allows you to add external links to the navbar. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
+## Allows you to add external links to the navigation. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
 nav_items:
   Medium:             https://medium.com/@connor_baer
   Twitter:            https://twitter.com/connor_baer
   Github:             https://github.com/connor-baer
 
-version:              2.0.0
+version:              3.0.0
 
 github:
   repo:               https://github.com/connor-baer/connor-baer.github.io
-
-
-# /* Predefined theme colors */
-# $red: #ac4142;
-# $orange: #d28445;
-# $yellow: #f4bf75;
-# $green: #90a959;
-# $cyan: #75b5aa;
-# $blue: #268bd2;
-# // $blue: #6a9fb5;
-# $brown: #8f5536;
-
-# /* Set your colors here. You can use the predefined colors from above. */

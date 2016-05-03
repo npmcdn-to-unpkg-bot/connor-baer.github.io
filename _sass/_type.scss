@@ -17,6 +17,7 @@ h1 {
 h2 {
   font-size: 3.011rem;
   font-family: $ornamental;
+  text-align: center;
 }
 
 h3 {
@@ -41,8 +42,37 @@ h6.lead {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 1rem;
   font-family: $body;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.link {
+  color: $primary;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  strong {
+    color: inherit;
+  }
+}
+
+.invert a.link {
+  color: #fff;
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: $primary;
+  }
 }
 
 strong, .strong {
@@ -57,8 +87,4 @@ strong, .strong {
 .unstyle li {
   display: inline-block;
   margin-left: 0;
-}
-
-.white {
-  color: #fff;
 }

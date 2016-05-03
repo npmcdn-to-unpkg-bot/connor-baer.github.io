@@ -40,7 +40,7 @@ $code-color: #bf616a;
 
 /* Typography */
 
-$ornamental: 'abril-fatface', 'Calluna', 'Merriweather' Georgia, sans-serif;
+$ornamental: 'abril-fatface', 'Calluna', 'Merriweather', Georgia, sans-serif;
 $header: 'sofia-pro', 'Montserrat', 'PT Sans', Helvetica, sans-serif;
 $body: 'Calluna', 'Merriweather', Georgia, serif;
 $code-font-family: 'Courier New', Courier, monospace;
@@ -63,3 +63,5 @@ $desktop: 64em; /*1024px*/
 @import "social";
 @import "header";
 @import "navigation";
+@import "cards";
+@import "footer";
