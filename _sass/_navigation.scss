@@ -1,6 +1,6 @@
 .navigation {
 	background-color: #fff;
-	height: 3.5rem;
+	height: 3.75rem;
 	border-bottom: 2px solid $primary;
 }
 
@@ -10,19 +10,20 @@
 
 .navigation-item {
 	font-family: $condensed;
-	font-size: 1.2rem;
+	font-weight: $bold;
+	font-size: 1.1rem;
 	text-transform: uppercase;
 	margin-right: 2rem;
 	letter-spacing: 0.05rem;
 	padding: 1rem 0;
-	color: $gray-80;
+	color: $primary;
 	transition: color 0.2s ease-in-out;
 	&:hover,
 	&:focus {
-		color: $primary;
+		color: $gray-80;
 	}
 }
 
 .navigation-item#active {
-	color: $primary;
+	color: $gray-80;
 }
