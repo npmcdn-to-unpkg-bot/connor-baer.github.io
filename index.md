@@ -1,6 +1,8 @@
 ---
 layout: home
 title: Projects
+menu: Projects
+order: 1
 ---
 
 <div class="posts">

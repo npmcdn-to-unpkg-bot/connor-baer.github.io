@@ -16,7 +16,7 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	&:hover, &:focus {
-		background-image: url("/assets/hover.png");
+		opacity: 0.7;
 	}
 }
 

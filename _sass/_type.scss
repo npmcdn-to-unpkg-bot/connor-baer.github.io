@@ -1,6 +1,18 @@
 // Typography
 /* Headings, body text, lists, and other misc typographic elements. */
 
+h1, h2, h3, h4, h5, a {
+  color: $primary;
+}
+
+.invert {
+  background-color: $primary;
+}
+
+.invert h1, .invert h2, .invert h3, .invert h4, .invert h5, .invert a {
+  color: #fff;
+}
+
 h1, h2, h3, h4, h5 {
   margin-bottom: 0.5rem;
   font-weight: $bold;
@@ -53,7 +65,6 @@ a {
 }
 
 a.link {
-  color: $primary;
   text-decoration: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   &:hover,
@@ -68,7 +79,6 @@ a.link {
 }
 
 .invert a.link {
-  color: #fff;
   &:hover,
   &:focus {
     background-color: #fff;

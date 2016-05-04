@@ -1,15 +1,14 @@
 <nav class="navigation">
 	<div class="ctnr-golden">
 	    <ul class="unstyle navigation-links">
-	        {% assign pages_list = site.pages %}
+	        {% assign pages_list = site.pages | sort:"order" %}
 	        {% for node in pages_list %}
 	          {% if node.title != null %}
 	            {% if node.layout != "default" %}
-	              <li><a class="navigation-item" id="{% if page.url == node.url %}active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+	              <li><a class="navigation-item link" id="{% if page.url == node.url %}active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.menu }}</a></li>
 	            {% endif %}
 	          {% endif %}
 	        {% endfor %}
-	        <li><a class="navigation-item" href="mailto:hello@connorbaer.io">Contact</a></li>
 	    </ul>
 	</div>
 </nav>
