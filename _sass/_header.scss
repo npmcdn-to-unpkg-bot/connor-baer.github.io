@@ -1,5 +1,4 @@
 header {
-	width: 100%;
 	background-color: $gray-90;
 }
 
@@ -15,4 +14,10 @@ header {
 	.header-text {
 		width: 80%;
 	}
+}
+
+.header-content {
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+	color: #fff; 
 }

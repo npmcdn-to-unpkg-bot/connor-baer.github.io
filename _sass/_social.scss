@@ -11,12 +11,6 @@
 .social-bear {
 	width: 3rem;
 	height: 3rem;
-	transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-	&:hover, &:focus {
-		-webkit-transform: scale(1.2);
-	    -moz-transform: scale(1.2);
-	    transform: scale(1.2);
-	}
 }
 
 .social-links {
@@ -25,15 +19,19 @@
 }
 
 .social-icon {
-	height: 2.5rem;
-	width: 2.5rem;
-	padding: 0.5rem;
+	height: 2.1rem;
+	width: 2.1rem;
+	padding: 0.45rem;
 	fill: #fff;
 	margin-left: 1.5rem;
-	border: 2px solid transparent;
-	transition: border 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.social-bear, .social-icon {
+	transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 	&:hover, &:focus {
-		border: 2px solid white;
+		-webkit-transform: scale(1.25);
+	    -moz-transform: scale(1.25);
+	    transform: scale(1.25);
 	}
 }
 
