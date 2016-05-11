@@ -21,13 +21,13 @@
 
 /* Colors */
 $primary: {{site.color.primary}};
-$primary-darker: {{site.color.primary-darker}};
-$primary-lighter: {{site.color.primary-lighter}};
-$primary-lighterer: {{site.color.primary-lighterer}};
+$primary-darker: #0EBE75;
+$primary-lighter: #2EEF9F;
+$primary-lighterer: #54F2B0;
 
-$gray-5: #F5F5F5;
-$gray-70: #5B5B5D;
-$gray-80: #333234;
+$gray-5: #EBEBEB;
+$gray-70: #5B5B5B;
+$gray-80: #333333;
 $gray-90: #0A0A0A;
 
 /* These colors control individual parts of the website. For convenience some are linked to the main colors above, but feel free to adjust them independently. */
