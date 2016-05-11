@@ -8,11 +8,12 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 
 # Settings
 color:                
-  primary:            '#0000FF'
+  primary:            '#1BE17E'
   primary-darker:     '#0000E0'
   primary-lighter:    '#3333FF'
   primary-lighterer:  '#5C5CFF'
@@ -29,15 +30,28 @@ keywords:             'connor, baer, bear, designer, developer, traveller, desig
 description:          'I am a <a data-scroll href="#footer" class="strong link">digital nomad*</a> currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for <a href="http://uwc.de" class="strong link">Deutsche Stiftung UWC</a>.'
 url:                  http://connorbaer.io
 baseurl:              ''
+logo:                 /assets/apple-icon-144x144.png
+twitter:
+  username:           connor_baer
 
 ## replace analytics key below to enable tracking, leave blank to disable
 google_analytics_key: UA-37412525-4 
+google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 author:
   name:               Connor Bär
   url:                http://connorbaer.io
   email:              hello@connorbaer.io
   twitter:            connor_baer
+
+social:
+  name:               Connor Bär
+  links:              
+    - https://twitter.com/connor_baer
+    - https://instagram.com/connor_baer
+    - https://github.com/connor-baer
+    - https://medium.com/@connor_baer
+    - https://www.snapchat.com/add/connor_baer
 
 ## Allows you to add external links to the navigation. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
 nav_items:
