@@ -27,7 +27,7 @@
 }
 
 .social-bear, .social-icon {
-	transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+	transition: transform 0.15s ease-in-out;
 	&:hover, &:focus {
 		-webkit-transform: scale(1.25);
 	    -moz-transform: scale(1.25);
@@ -36,11 +36,15 @@
 }
 
 @media (max-width: $phone) {
-	.social-links {
-		padding: 0rem 0;
+	.social {
+		height: 6.4rem;
+	}
+	.social-bear {
+		width: 3.4rem;
+		height: 3.4rem;
 	}
 	.social-icon {
-		height: 3rem;
-		width: 3rem;
+		height: 2.5rem;
+		width: 2.5rem;
 	}
 }

@@ -5,22 +5,21 @@ h1, h2, h3, h4, h5, a {
   color: $primary;
 }
 
-.invert {
+/*.invert {
   background-color: $primary;
 }
 
 .invert h1, .invert h2, .invert h3, .invert h4, .invert h5, .invert a {
   color: #fff;
-}
+}*/
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-weight: $bold;
   margin-top: 0;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
   font-family: $sans-serif;
-  letter-spacing: 0.05rem;
 }
 
 h1 {
@@ -46,12 +45,6 @@ h5 {
 
 h6 {
   font-size: 1.444rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-  line-height: 1.75;
-  text-rendering: optimizeLegibility;
-  font-family: $sans-serif;
-  font-weight: $normal;
 }
 
 p {
@@ -65,11 +58,11 @@ a {
 }
 
 a.link {
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
   &:hover,
   &:focus {
     background-color: $primary;
-    color: #fff;
+    color: #000;
   }
 
   strong {
@@ -77,13 +70,13 @@ a.link {
   }
 }
 
-.invert a.link {
+/*.invert a.link {
   &:hover,
   &:focus {
     background-color: #fff;
     color: $primary;
   }
-}
+}*/
 
 strong, .strong {
   font-weight: $bold;
