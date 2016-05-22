@@ -1,50 +1,55 @@
 .social {
-	padding-top: 1.5rem;
-	height: 6rem;
-	background-color: $gray-90;
+	padding: 1.25rem 1.75rem;
+	background-color: #fff;
+	width: 100%;
 }
 
 .social-logo {
 	float: left;
 }
 
-.social-bear {
-	width: 3rem;
-	height: 3rem;
-}
-
 .social-links {
 	float: right;
-	padding: 0.25rem 0;
 }
 
 .social-icon {
-	height: 2.1rem;
-	width: 2.1rem;
-	padding: 0.45rem;
-	fill: #fff;
+	padding: 0.6rem;
 	margin-left: 1.5rem;
 }
 
-.social-bear, .social-icon {
-	transition: transform 0.15s ease-in-out;
+.social-print, .social-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
+	fill: $gray-70;
 	&:hover, &:focus {
-		-webkit-transform: scale(1.25);
-	    -moz-transform: scale(1.25);
 	    transform: scale(1.25);
+	    fill: $primary;
 	}
 }
 
-@media (max-width: $phone) {
-	.social {
-		height: 6.4rem;
-	}
-	.social-bear {
-		width: 3.4rem;
-		height: 3.4rem;
-	}
-	.social-icon {
-		height: 2.5rem;
-		width: 2.5rem;
+.headroom .social {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999999;
+  transition: transform 0.2s ease-in-out;
+}
+
+.headroom--not-top .social {
+  border-bottom: 1px solid $gray-5;
+}
+
+.headroom--pinned .social, .headroom--unpinned.headroom--bottom .social {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned .social {
+  transform: translateY(-100%);
+}
+
+@media (min-width: $tablet) {
+	.headroom .social {
+		max-width: 50vw;
 	}
 }

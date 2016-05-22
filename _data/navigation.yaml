@@ -1,0 +1,9 @@
+---
+-
+    title:  'Projects'
+    url:    '/#projects'
+    order:   1
+-
+    title:  'Contact'
+    url:    '/#contact'
+    order:   2

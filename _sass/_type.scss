@@ -1,93 +1,107 @@
 // Typography
 /* Headings, body text, lists, and other misc typographic elements. */
 
-h1, h2, h3, h4, h5, a {
-  color: $primary;
-}
-
-/*.invert {
-  background-color: $primary;
-}
-
-.invert h1, .invert h2, .invert h3, .invert h4, .invert h5, .invert a {
-  color: #fff;
-}*/
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0.5rem;
-  font-weight: $bold;
-  margin-top: 0;
-  line-height: 1.25;
-  text-rendering: optimizeLegibility;
-  font-family: $sans-serif;
+h1, h2, h3, h4, h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: $sans;
 }
 
 h1 {
-  font-size: 3.764rem;
+  font-size: 2.606rem;
+  color: $primary;
+  font-weight: $sans-bold;
 }
 
 h2 {
-  font-size: 3.011rem;
-  text-align: center;
+  font-size: 2.085rem;
+  color: $primary;
+  font-weight: $sans-normal;
 }
 
 h3 {
-  font-size: 2.606rem;
+  font-size: 1.805rem;
+  color: $gray-90;
+  font-weight: $sans-bold;
 }
 
 h4 {
-  font-size: 2.085rem;
+  font-size: 1.444rem;
+  color: $gray-90;
+  font-weight: $sans-normal;
 }
 
 h5 {
-  font-size: 1.805rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: $gray-80;
+  line-height: 1.5;
+  font-weight: $sans-bold;
 }
 
 h6 {
-  font-size: 1.444rem;
+  font-size: 1rem;
+  text-align: center;
+  color: $gray-70;
+  line-height: 1.5;
+  font-family: $serif;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: $serif-bold;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-family: $serif;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  letter-spacing: -0.003em;
+  font-weight: $serif-normal;
+}
+
+.caps:before { 
+  float: left; 
+  color: $primary; 
+  font-size: 4.4rem; 
+  line-height: 1; 
+  padding: 0 0.5rem 0 0.25rem; 
+  font-family: $serif;
+  content: attr(alt);
 }
 
 a {
   text-decoration: none;
+  color: $primary;
 }
 
-a.link {
-  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-  &:hover,
-  &:focus {
+.post a, a.link {
+  position: relative;
+  display: inline-block;
+  color: $gray-90;
+  transition: color 0.15s ease-out;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
     background-color: $primary;
-    color: #000;
+    /*transform: translate(0px,-5px);*/
   }
-
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+  }
   strong {
     color: inherit;
   }
 }
 
-/*.invert a.link {
-  &:hover,
-  &:focus {
-    background-color: #fff;
-    color: $primary;
-  }
-}*/
-
 strong, .strong {
-  font-weight: $bold;
-}
-
-.unstyle {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.unstyle li {
-  display: inline-block;
-  margin-left: 0;
+  font-weight: $serif-bold;
 }

@@ -15,6 +15,9 @@ gems:
 # Settings
 color:                
   primary:            '#11DD88'
+  primary-darker:     '#0EBE75'
+  primary-lighter:    '#2EEF9F'
+  primary-lighterer:  '#54F2B0'
 exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
   sass_dir:           _sass
@@ -22,10 +25,10 @@ sass:
 
 
 # Site meta
-title:                Hello! I’m Connor.
+title:                Made by Connor.
 tagline:              'Designer, developer & traveller. Embrace change.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
-description:          'I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for Deutsche Stiftung UWC.'
+description:          'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for Deutsche Stiftung UWC.'
 url:                  http://connorbaer.io
 baseurl:              ''
 logo:                 /assets/apple-icon-144x144.png

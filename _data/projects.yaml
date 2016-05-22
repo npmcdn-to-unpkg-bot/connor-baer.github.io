@@ -1,0 +1,29 @@
+---
+-
+    title: 'UWCxBlogs'
+    description: 'A collection of over 300 blogs in 20 languages written by UWC students from more than 55 countries at the 15 United World Colleges.'
+    image: uwcblogs
+    url: 'http://uwcblogs.com'
+    category: side project
+    order: 3
+-
+    title: 'It’s Spring!'
+    description: 'A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.'
+    image: spring
+    url: 'http://spring.connorbaer.io'
+    category: side project
+    order: 2
+-
+    title: 'UWC Germany'
+    description: 'Design and development of a new website for Deutsche Stiftung UWC. Work in progress.'
+    image: uwcde
+    url: 'http://uwc.de'
+    category: client work
+    order: 1
+-
+    title: 'Waterford UWC'
+    description: 'Pro bono work for my former school: includes conceptualisation, design and development of a new website & design of new brochures.'
+    image: uwcwk
+    url: 'http://waterford.sz'
+    category: client work
+    order: 4

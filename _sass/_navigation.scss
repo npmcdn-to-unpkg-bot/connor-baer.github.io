@@ -1,25 +1,38 @@
 .navigation {
 	background-color: #fff;
-	height: 3.75rem;
-	border-bottom: 1px solid $gray-90;
+	border-bottom: 1px solid $gray-5;
+	border-top: 1px solid $gray-5;
 }
 
-.navigation-links {
+.navigation-items {
 	display: block;
-	padding-top: 1rem;
-	text-align: center;
+	padding: 0.75rem 0;
+	margin: 0;
+	list-style: none;
 }
 
 .navigation-item {
-	font-family: $sans-serif;
+	margin: 0 2.25rem 0 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.navigation-link {
+	font-family: $sans;
 	text-transform: uppercase;
 	font-size: 1.1rem;
 	letter-spacing: 0.1rem;
-	margin: 1rem;
-	font-weight: $bold;
+
+	font-weight: $sans-bold;
 	color: $gray-70;
+	display: inline-block;
+	transition: color 0.15s ease-in-out;
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
 }
 
-.navigation-item#active {
+.navigation-link#active {
 	color: $primary;
 }

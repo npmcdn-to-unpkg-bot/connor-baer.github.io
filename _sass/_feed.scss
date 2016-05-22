@@ -1,0 +1,60 @@
+.feed {
+	margin-bottom: 3rem;
+}
+
+.feed-header {
+	height: 100%;
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+
+.feed-headline {
+	float: left;
+	color: $gray-90;
+}
+
+.feed-more {
+	float: right;
+}
+
+.feed-arrow {
+	cursor: pointer;
+	margin-left: 1.25rem;
+	display: inline-block;
+	color: $gray-90;
+	transition: color 0.12s ease-out;
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
+}
+
+.feed-arrow.slick-disabled {
+	color: $gray-5;
+	cursor: default;
+	&:hover {
+		color: $gray-5;
+	}
+}
+
+.feed-content {
+	width: 100%;
+	max-width: 85rem;
+	padding-left: 2rem;
+	margin: 0 auto;
+}
+
+@media (min-width: $phone) {
+	.feed-content {
+		padding-right: 2rem;
+		padding-left: 4rem;
+	}
+}

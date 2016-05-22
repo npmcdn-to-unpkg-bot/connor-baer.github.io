@@ -11,12 +11,6 @@
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: $normal;
-}
-@media (max-width: $phone) {
-  html {
-    font-size: 12px;
-  }
 }
 
 body {
@@ -24,19 +18,11 @@ body {
   background-color: $primary;
 }
 
-.body-wrapper {
-  background-color: $gray-5;
-  min-height: 100vh;
-  min-width: 100vw;
-  max-width: 90rem;
-  margin: 0 auto;
-}
-
 ::-moz-selection {
-    color: white;
-    background: $gray-90;
+    color: $body-color;
+    background: $primary-lighterer;
 }
 ::selection {
-    color: white; 
-    background: $gray-90;
+    color: $body-color; 
+    background: $primary-lighterer;
 }

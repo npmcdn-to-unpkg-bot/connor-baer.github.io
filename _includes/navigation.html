@@ -1,14 +1,9 @@
-<nav class="navigation">
-	<div class="ctnr-wide">
-	    <ul class="unstyle navigation-links">
-	        {% assign pages_list = site.pages | sort:"order" %}
-	        {% for node in pages_list %}
-	          {% if node.menu != null %}
-	            {% if node.layout != "default" %}
-	              <li><a class="navigation-item link" id="{% if page.url == node.url %}active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.menu }}</a></li>
-	            {% endif %}
-	          {% endif %}
-	        {% endfor %}
-	    </ul>
-	</div>
-</nav>
+{% assign navurl = page.url | remove: 'index.html' %}
+<div id="js-nav" class="navigation ctnr-wide">
+    <ul class="navigation-items">
+	    {% for page in include.nav | sort: 'order' %}
+	    {% assign anchor = page.url | slice: 1 %}
+	    <li class="navigation-item"><a {% if anchor == '#' %}data-scroll{% endif %} class="navigation-link" id="{% if page.url == navurl %}active{% endif %}" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+	    {% endfor %}
+    </ul>
+</div>
