@@ -26,9 +26,9 @@ sass:
 
 # Site meta
 title:                Made by Connor.
-tagline:              'Designer, developer & traveller. Embrace change.'
+tagline:              'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for Deutsche Stiftung UWC.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
-description:          'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for Deutsche Stiftung UWC.'
+description:          'Designer, developer & traveller. Embrace change.'
 url:                  http://connorbaer.io
 baseurl:              ''
 logo:                 /assets/apple-icon-144x144.png
