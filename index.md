@@ -99,7 +99,7 @@ image: '/assets/cloud.jpg'
     <label for="message">What can I do for you?</label>
     <textarea rows="4" type="text" name="message" placeholder="Hi Connor! I have a question…" required="true"></textarea>
     <input type="hidden" name="_subject" value="Someone wants to say hello" />
-    <input type="hidden" name="_next" value="//connorbaer.io/success.html" />
+    <input type="hidden" name="_next" value="//connorbaer.io/success/" />
     <input type="text" name="_gotcha" style="display:none" />
     <button class="button" type="submit">Send and smile!</button>
   </form>
