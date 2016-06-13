@@ -24,6 +24,6 @@ gulp.task('scripts', function () {
   return gulp.src('assets/scripts.js')
   .pipe(plumber())
   .pipe(uglify())
-  .pipe(rename("scripts.min.js"))
-  .pipe(gulp.dest('assets'))
+  .pipe(rename("scripts.html"))
+  .pipe(gulp.dest('_includes'))
 });
