@@ -1,20 +1,53 @@
-header {
+.header {
 	background-color: #fff;
+	height: 100vh;
+	width: 100%;
+	background: 50% 50% / cover;
 }
 
-.header-content {
-	padding: 9rem 0 3rem;
+.header-large {
+	display: none;
 }
 
-.header-title {
-  font-size: 4.348rem;
-  font-family: $ornamental;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  line-height: 1.25;
-  letter-spacing: 0.1rem;
+.header-small {
+	display: none;
 }
 
-.header-description {
-  line-height: 2rem;
+.header-text {
+	font-size: 3.5rem;
+	font-family: $sans;
+    font-weight: $sans-bold;
+}
+
+@media (max-width: $phone) {
+	.header {
+		background-position: 20% 50%;
+	}
+
+	.header-small {
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 50%;
+	    transform: translateY(-50%);
+	}
+}
+
+@media (min-width: $phone) {
+	.header-large {
+		display: block;
+		width: 32rem;
+		max-width: 80%;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 50%;
+	    transform: translateY(-50%);
+	}
 }

@@ -13,11 +13,7 @@ gems:
 
 
 # Settings
-color:                
-  primary:            '#11DD88'
-  primary-darker:     '#0EBE75'
-  primary-lighter:    '#2EEF9F'
-  primary-lighterer:  '#54F2B0'
+color:                '#fff'
 exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
   sass_dir:           _sass

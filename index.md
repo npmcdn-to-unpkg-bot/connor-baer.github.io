@@ -1,71 +1,106 @@
 ---
-layout: home
-title: Projects
+layout: default
+title: Made by Connor.
+image: '/assets/cloud.jpg'
 ---
+<nav>
+  {% include navigation.html nav=site.data.navigation %}
+</nav>
+<header>
+  <div class="header" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
+    <svg class="header-large" viewBox="0 0 450 75">
+      <defs>
+        <g id="text-large">
+          <text class="header-text" text-anchor="middle" x="225" y="55">Made by Connor.</text>
+        </g>
+        <mask id="mask-large" x="0" y="0" width="450" height="75">
+          <rect x="0" y="0" width="450" height="75" fill="#fff"/>
+          <use xlink:href="#text-large" />
+        </mask>
+      </defs>
+      <rect x="0" y="0" width="450" height="75" mask="url(#mask-large)" fill="white" fill-opacity="1"/>
+      <use xlink:href="#text-large" mask="url(#mask-large)" />
+    </svg>
+    <svg class="header-small" viewBox="0 0 245 150">
+      <defs>
+        <g id="text-top">
+          <text class="header-text" x="15" y="53">Made by</text>
+        </g>
+        <mask id="mask-top" x="0" y="0" width="245" height="75" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="245" height="75" fill="#fff"/>
+          <use xlink:href="#text-top" />
+        </mask>
+        <g id="text-bottom">
+          <text class="header-text" x="15" y="128">Connor.</text>
+        </g>
+        <mask id="mask-bottom" x="0" y="75" width="225" height="75" maskUnits="userSpaceOnUse">
+          <rect x="0" y="75" width="225" height="75" fill="#fff"/>
+          <use xlink:href="#text-bottom" />
+        </mask>
+      </defs>
+      <rect x="0" y="0" width="245" height="75" mask="url(#mask-top)" fill="white" fill-opacity="1"/>
+      <use xlink:href="#text-top" mask="url(#mask-top)" />
+      <rect x="0" y="75" width="225" height="75" mask="url(#mask-bottom)" fill="white" fill-opacity="1"/>
+      <use xlink:href="#text-bottom" mask="url(#mask-bottom)" />
+    </svg>
+  </div>
+</header>
 
-<div class="feed">
-  <div class="feed-header ctnr-wide">
-    <h1 id="projects" class="feed-headline">Projects</h1>
-    <div class="feed-more">
-      <h1 id="feed-left" class="feed-arrow">&#10092;</h1>
-      <h1 id="feed-right" class="feed-arrow">&#10093;</h1>
+<!-- <section class="section ctnr-golden">
+  <h3 id="about">About</h3>
+  <h1>We love people who love making things… and cheese!</h1>
+  <h4>{{ site.tagline }}</h4>
+  <a class="link" href="/process">Learn about my work process →</a>
+</section> -->
+
+<section class="section ctnr-golden">
+  <h3 id="creating">creating</h3>
+    <div class="section-projects">
+    {% assign projects = site.data.projects | sort: 'order' %}
+    {% for project in projects %}
+      <div class="section-project">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <a class="link" href="{{ project.url }}">{{ project.cta }} →</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section ctnr-golden">
+  <h3 id="writing">Writing</h3>
+  {% for post in site.posts | limit: 3 %}
+  <a href="{{ post.medium }}" class="post-link">
+    <h2 class="post-header">{{ post.title }}</h2>
+    <div class="section-post">
+      <p class="post-text">{{ post.content | strip_html | truncatewords: 28 }}</p>
+      {% if post.thumb %}
+      <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
+      {% endif %}
     </div>
-  </div>
-  <div class="feed-content">
-    <div class="cards js-slick">
-      {% assign projects = site.data.projects | sort: 'order' %}
-      {% for project in projects %}
-        <div class="card">
-          <a href="{{ project.url }}">
-            <div class="card-header">
-              <div class="card-tag"><p>{{ project.category }}</p></div>
-              <div class="card-image" style="background-image: url('{{ site.baseurl }}/img/{{project.image}}.jpg')"></div>
-              </div>
-            <div class="card-content">
-              <h2 class="card-headline">{{ project.title }}</h2>
-              <p class="card-description">{{ project.description }}</p>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-<div class="feed">
-  <div class="feed-header ctnr-wide">
-    <h1 id="contact" class="feed-headline">Get in touch!</h1>
-  </div>
-  <div class="ctnr-golden">
-    <form action="//formspree.io/hello@connorbaer.io" method="POST">
-      <label for="name">What’s your name?</label>
-      <input type="text" name="name" placeholder="Jane" required="true">
-      <label for="_replyto">What’s your email address?</label>
-      <input type="email" name="_replyto" placeholder="jane@example.com" required="true">
-      <label for="message">What can I do for you?</label>
-      <textarea rows="4" type="text" name="message" placeholder="Hi Connor! I have a question…" required="true"></textarea>
-      <input type="hidden" name="_subject" value="Someone wants to say hello" />
-      <input type="hidden" name="_next" value="//connorbaer.io/success.html" />
-      <input type="text" name="_gotcha" style="display:none" />
-      <button class="button" type="submit">Send and smile!</button>
-    </form>
-  </div>
-</div>
-<!-- <div class="ctnr-wide">
-<a id="typeform-button" class="typeform-share" href="https://connorbaer.typeform.com/to/KrxW5z" data-mode="1" target="_blank">Get in touch!</a>
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
-</div> -->
-
-<!-- <div class="posts">
-  {% for post in site.posts %}
-  <div class="post">
-    <a name="{{ post.title | downcase | url_encode }}"><h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-    
-    {{ post.content }}
-  </div></a>
+  </a>
   {% endfor %}
-</div> -->
+  <a class="link section-medium" href="https://blog.connorbaer.io/">Read more on Medium →</a>
+</section>
+
+<section class="section ctnr-golden">
+  <h3 id="contact">Contact</h3>
+  <form action="//formspree.io/hello@connorbaer.io" method="POST">
+    <div class="section-inputs">
+      <div class="section-input">
+        <label for="name">What’s your name?</label>
+        <input type="text" name="name" placeholder="Jane" required="true">
+      </div>
+      <div class="section-input">
+        <label for="_replyto">What’s your email address?</label>
+        <input type="email" name="_replyto" placeholder="jane@example.com" required="true">
+      </div>
+    </div>
+    <label for="message">What can I do for you?</label>
+    <textarea rows="4" type="text" name="message" placeholder="Hi Connor! I have a question…" required="true"></textarea>
+    <input type="hidden" name="_subject" value="Someone wants to say hello" />
+    <input type="hidden" name="_next" value="//connorbaer.io/success.html" />
+    <input type="text" name="_gotcha" style="display:none" />
+    <button class="button" type="submit">Send and smile!</button>
+  </form>
+</section>
