@@ -5,7 +5,7 @@ image: '/assets/cloud.jpg'
 ---
 
 <nav>
-  {% include navigation.html nav=site.data.navigation %}
+  {% include navigation.html %}
 </nav>
 <header>
   <div class="header" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
@@ -56,7 +56,7 @@ image: '/assets/cloud.jpg'
 
 <section class="section ctnr-golden">
   <h3 id="creating">creating</h3>
-    <div class="section-projects">
+  <div class="section-projects">
     {% assign projects = site.data.projects | sort: 'order' %}
     {% for project in projects %}
       <div class="section-project">

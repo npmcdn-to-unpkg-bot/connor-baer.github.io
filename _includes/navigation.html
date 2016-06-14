@@ -1,9 +1,9 @@
-{% assign navurl = page.url | remove: 'index.html' %}
+{% assign pages = site.data.navigation | sort: 'order' %}
 <ul class="nav-large">
-	{% for page in include.nav | sort: 'order' %}{% assign anchor = page.url | slice: 1 %}<li class="nav-item"><a {% if anchor == '#' %}data-scroll{% endif %} class="nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>{% endfor %}
+	{% for page in pages %}{% assign anchor = page.url | slice: 1 %}<li class="nav-item"><a {% if anchor == '#' %}data-scroll{% endif %} class="nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>{% endfor %}
 </ul>
 <div class="nav-small">
-    {% for page in include.nav | limit: 1 %}
+    {% for page in include.nav %}
     {% if page.mobile %}
     	<a data-scroll class="nav-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.mobile }} →</a>
     {% endif %}

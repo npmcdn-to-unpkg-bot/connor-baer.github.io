@@ -18,6 +18,7 @@ exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfi
 sass:
   sass_dir:           _sass
   style:              compressed
+permalink:            /:title/
 
 
 # Site meta
@@ -27,7 +28,7 @@ keywords:             'connor, baer, bear, designer, developer, traveller, desig
 description:          'Designer, developer & traveller. Embrace change.'
 url:                  http://connorbaer.io
 baseurl:              ''
-logo:                 /assets/apple-icon-144x144.png
+logo:                 /assets/icons/apple-icon-144x144.png
 twitter:
   username:           connor_baer
 facebook:
@@ -50,12 +51,6 @@ social:
     - https://github.com/connor-baer
     - https://medium.com/@connor_baer
     - https://www.snapchat.com/add/connor_baer
-
-## Allows you to add external links to the navigation. Remove, add and re-arrange to your convenience.
-nav_items:
-  Medium:             https://medium.com/@connor_baer
-  Twitter:            https://twitter.com/connor_baer
-  Github:             https://github.com/connor-baer
 
 version:              3.0.0
 
