@@ -90,15 +90,15 @@ image: '/assets/cloud.jpg'
     <div class="section-inputs">
       <div class="section-input">
         <label for="name">What’s your name?</label>
-        <input type="text" name="name" placeholder="Jane" required="true">
+        <input type="text" name="name" placeholder="Jane" required>
       </div>
       <div class="section-input">
         <label for="_replyto">What’s your email address?</label>
-        <input type="email" name="_replyto" placeholder="jane@example.com" required="true">
+        <input type="email" name="_replyto" placeholder="jane@example.com" required>
       </div>
     </div>
     <label for="message">What can I do for you?</label>
-    <textarea rows="4" type="text" name="message" placeholder="Hi Connor! I have a question…" required="true"></textarea>
+    <textarea rows="4" name="message" placeholder="Hi Connor! I have a question…" required></textarea>
     <input type="hidden" name="_subject" value="Someone wants to say hello" />
     <input type="hidden" name="_next" value="//connorbaer.io/success/" />
     <input type="text" name="_gotcha" style="display:none" />
