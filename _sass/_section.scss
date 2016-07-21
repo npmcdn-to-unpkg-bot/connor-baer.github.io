@@ -46,8 +46,8 @@
 	}
 }
 
-.post-link:hover .post-header:before,
-.post-link:focus .post-header:before,  {
+.post-header:hover:before,
+.post-header:focus:before,  {
 	visibility: visible;
 	opacity: 1;
 	transform: translate(0px,0);

@@ -26,35 +26,31 @@
 */
 
 /* Colors */
-$blue-7: #2962FF;
-$blue-4: #2979FF;
-$blue-2: #448AFF;
-$blue-1: #82B1FF;
 
-$purple-7: #AA00FF;
-$purple-4: #D500F9;
-$purple-2: #E040FB;
-$purple-1: #EA80FC;
+$pink-6: #C21E68;
+$pink-4: #DD2476;
+$pink-2: #E34F92;
 
-$red-7: #D50000;
-$red-4: #FF1744;
-$red-2: #FF5252;
-$red-1: #FF8A80;
+$orange-6: #FF330A;
+$orange-4: #FF512F;
+$orange-2: #FF775C;
 
-$orange-7: #FF6D00;
-$orange-4: #FF9100;
-$orange-2: #FFAB40;
-$orange-1: #FFD180;
-
-$green-7: #00C853;
+$green-6: #00C853;
 $green-4: #00E676;
 $green-2: #69F0AE;
-$green-1: #B9F6CA;
 
-$yellow-7: #FFD600;
+$yellow-6: #FFD600;
 $yellow-4: #FFEA00;
 $yellow-2: #FFFF00;
-$yellow-1: #FFFF8D;
+
+$blue-6: #2962FF;
+$blue-4: #2979FF;
+$blue-2: #448AFF;
+
+$violet-6: #AA00FF;
+$violet-4: #D500F9;
+$violet-2: #E040FB;
+
 
 $gray-7: #1F1F1F;
 $gray-6: #444444;
@@ -64,17 +60,15 @@ $gray-1: #CCCCCC;
 
 /* These colors control individual parts of the website. For convenience some are linked to the main colors above, but feel free to adjust them independently. */
 
-$primary-7: $blue-7;
-$primary-4: $blue-4;
-$primary-2: $blue-2;
-$primary-1: $blue-1;
+$primary-7: $pink-6;
+$primary-4: $pink-4;
+$primary-2: $pink-2;
 
-$secondary-7: $orange-7;
+$secondary-7: $orange-6;
 $secondary-4: $orange-4;
 $secondary-2: $orange-2;
-$secondary-1: $orange-1;
 
-$link-color: $blue-7;
+$link-color: $blue-6;
 $border-color: $gray-1;
 $code-color: #bf616a;
 $navigation-color: $gray-6;
@@ -103,6 +97,6 @@ $desktop: 64em; /*1024px*/
 @import "header";
 @import "navigation";
 @import "section";
-/*@import "content";*/
+@import "content";
 @import "form";
 @import "footer";

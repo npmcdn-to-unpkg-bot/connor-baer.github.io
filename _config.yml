@@ -52,7 +52,15 @@ social:
     - https://medium.com/@connor_baer
     - https://www.snapchat.com/add/connor_baer
 
-version:              3.0.0
+nav:
+  creating:           '/#creating'
+  writing:            '/#writing'
+  contact:            '/#contact'
+
+mobile: 
+  projects:           '/#creating'
+
+version:              3.0.5
 
 github:
   repo:               https://github.com/connor-baer/connor-baer.github.io
