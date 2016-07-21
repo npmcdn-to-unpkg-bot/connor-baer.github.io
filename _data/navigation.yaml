@@ -1,0 +1,19 @@
+---
+# -
+#   title:  'About'
+#   url:    '/#about'
+#   order:  1
+#   mobile: 'About Me'
+-
+  title:  'Creating'
+  url:    '/#creating'
+  order:  2
+  mobile: 'projects'
+-
+  title:  'Writing'
+  url:    '/#writing'
+  order:  3
+-
+  title:  'Contact'
+  url:    '/#contact'
+  order:  5

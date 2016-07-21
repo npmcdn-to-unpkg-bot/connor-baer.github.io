@@ -6,32 +6,36 @@ highlighter:          rouge
 # Gems
 gems:
   - jekyll-sitemap
+  - jekyll-feed
   - jekyll-gist
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 
 # Settings
-color:                
-  primary:            '#0000FF'
-  primary-darker:     '#0000E0'
-  primary-lighter:    '#3333FF'
-  primary-lighterer:  '#5C5CFF'
+color:                '#fff'
 exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
   sass_dir:           _sass
   style:              compressed
+permalink:            /:title/
 
 
 # Site meta
-title:                Hello! I'm Connor.
-tagline:              'Designer, developer & traveller. Embrace change.'
+title:                Made by Connor.
+tagline:              'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for Deutsche Stiftung UWC.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
-description:          'I am a <a data-scroll href="#footer" class="strong link">digital nomad*</a> currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for <a href="http://uwc.de" class="strong link">Deutsche Stiftung UWC</a>.'
+description:          'Designer, developer & traveller. Embrace change.'
 url:                  http://connorbaer.io
 baseurl:              ''
+logo:                 /assets/icons/apple-icon-144x144.png
+twitter:
+  username:           connor_baer
+facebook:
+  app_id:             169140053203395
 
-## replace analytics key below to enable tracking, leave blank to disable
 google_analytics_key: UA-37412525-4 
+google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 author:
   name:               Connor Bär
@@ -39,11 +43,14 @@ author:
   email:              hello@connorbaer.io
   twitter:            connor_baer
 
-## Allows you to add external links to the navigation. Remove, add and re-arrange to your convenience. Keep below 3 links for best results.
-nav_items:
-  Medium:             https://medium.com/@connor_baer
-  Twitter:            https://twitter.com/connor_baer
-  Github:             https://github.com/connor-baer
+social:
+  name:               Connor Bär
+  links:              
+    - https://twitter.com/connor_baer
+    - https://instagram.com/connor_baer
+    - https://github.com/connor-baer
+    - https://medium.com/@connor_baer
+    - https://www.snapchat.com/add/connor_baer
 
 version:              3.0.0
 

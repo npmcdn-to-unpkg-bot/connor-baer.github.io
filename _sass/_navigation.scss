@@ -1,28 +1,68 @@
-.navigation {
-	background-color: #fff;
-	height: 3.5rem;
-	border-bottom: 2px solid $primary;
+.nav-large {
+	display: none;
 }
 
-.navigation-links {
-	padding-top: 1rem;
+.nav-small {
+	display: block;
+	position: absolute;
+	left: 1.75rem;
+	height: 21px;
+	bottom: 9rem;
+	transform: rotate(90deg);
+	transform-origin: left bottom;
 }
 
-.navigation-item {
-	font-family: $condensed;
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	margin-right: 2rem;
-	letter-spacing: 0.05rem;
-	padding: 1rem 0;
-	color: $gray-80;
-	transition: color 0.2s ease-in-out;
+.nav-link {
+	font-family: $sans;
+	font-weight: $sans-bold;
+	font-size: 1.125rem;
+	padding: .2rem .5rem .25rem;
+	text-transform: lowercase;
+	letter-spacing: .075rem;
+	color: $navigation-color;
+	transition: color .12s ease-out;
 	&:hover,
 	&:focus {
-		color: $primary;
+		color: $secondary-7;
 	}
 }
 
-.navigation-item#active {
-	color: $primary;
+
+@media (min-width: $phone) {
+	.nav-small {
+		display: none;
+	}
+	.nav-large {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		padding: 2rem 0;
+		display: block;
+		margin: 0 auto;
+		list-style: none;
+		text-align: center;
+		width: 100vw;
+	}
+	.nav-item {
+		margin: 0 1.125rem;
+		padding: 0;
+		display: inline-block;
+	}
+	.headroom .nav-large {
+		z-index: 9999;
+		transition: transform 0.25s ease-in-out, padding 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	}
+
+	.headroom--not-top .nav-large {
+		background-color: rgba(255, 255, 255, 0.9);
+		padding: 1rem 0;
+	}
+
+	.headroom--pinned .nav-large {
+		transform: translateY(0%);
+	}
+
+	.headroom--unpinned .nav-large {
+		transform: translateY(100%);
+	}
 }

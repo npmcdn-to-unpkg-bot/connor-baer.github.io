@@ -3,12 +3,18 @@
 # only main files contain this front matter, not partials.
 ---
 
-//
-// 888d888 .d88b. 888  888  888 8888b. 88888b.  
-// 888P"  d88""88b888  888  888    "88b888 "88b 
-// 888    888  888888  888  888.d888888888  888 
-// 888    Y88..88PY88b 888 d88P888  888888  888 
-// 888     "Y88P"  "Y8888888P" "Y888888888  888 
+// 
+//                        d8b                 
+//                        Y8P                 
+//                                            
+// .d8888b 88888b. 888d88888888888b.  .d88b.  
+// 88K     888 "88b888P"  888888 "88bd88P"88b 
+// "Y8888b.888  888888    888888  888888  888 
+//      X88888 d88P888    888888  888Y88b 888 
+//  88888P'88888P" 888    888888  888 "Y88888 
+//         888                            888 
+//         888                       Y8b d88P 
+//         888                        "Y88P"  
 //
 // Designed, built, and released under MIT license by @connor_baer.
 
@@ -20,40 +26,73 @@
 */
 
 /* Colors */
-$primary: {{site.color.primary}};
-$primary-darker: {{site.color.primary-darker}};
-$primary-lighter: {{site.color.primary-lighter}};
-$primary-lighterer: {{site.color.primary-lighterer}};
+$blue-7: #2962FF;
+$blue-4: #2979FF;
+$blue-2: #448AFF;
+$blue-1: #82B1FF;
 
-$gray-5: #EBEAEB;
-$gray-70: #5B5B5D;
-$gray-80: #333234;
-$gray-90: #0A0A0A;
+$purple-7: #AA00FF;
+$purple-4: #D500F9;
+$purple-2: #E040FB;
+$purple-1: #EA80FC;
+
+$red-7: #D50000;
+$red-4: #FF1744;
+$red-2: #FF5252;
+$red-1: #FF8A80;
+
+$orange-7: #FF6D00;
+$orange-4: #FF9100;
+$orange-2: #FFAB40;
+$orange-1: #FFD180;
+
+$green-7: #00C853;
+$green-4: #00E676;
+$green-2: #69F0AE;
+$green-1: #B9F6CA;
+
+$yellow-7: #FFD600;
+$yellow-4: #FFEA00;
+$yellow-2: #FFFF00;
+$yellow-1: #FFFF8D;
+
+$gray-7: #1F1F1F;
+$gray-6: #444444;
+$gray-5: #707070;
+$gray-1: #CCCCCC;
+
 
 /* These colors control individual parts of the website. For convenience some are linked to the main colors above, but feel free to adjust them independently. */
-$body-color: $gray-90;
-$body-bg: $primary;
-$link-color: $primary;
-$border-color: $gray-5;
+
+$primary-7: $blue-7;
+$primary-4: $blue-4;
+$primary-2: $blue-2;
+$primary-1: $blue-1;
+
+$secondary-7: $orange-7;
+$secondary-4: $orange-4;
+$secondary-2: $orange-2;
+$secondary-1: $orange-1;
+
+$link-color: $blue-7;
+$border-color: $gray-1;
 $code-color: #bf616a;
+$navigation-color: $gray-6;
 
 
-/* Typography */
-
-$condensed: 'Bebas Neue', 'Calluna', 'Merriweather', Georgia, sans-serif;
-$sans-serif: 'sofia-pro', 'Sofia Pro', 'Montserrat', 'PT Sans', Helvetica, sans-serif;
-$serif: 'Calluna', 'Merriweather', Georgia, serif;
+$sans: 'freight-sans-pro', 'Freight Sans Pro', 'PT Sans', Arial, sans-serif;
+$sans-normal: 500;
+$sans-bold: 700;
+$serif: 'freight-text-pro', 'Freight Text Pro', 'Times New Roman', Times, serif;
+$serif-normal: 400;
+$serif-bold: 700;
 $code: 'Courier New', Courier, monospace;
-
-$normal: 400;
-$bold: 700;
 
 
 /* Breakpoints */
 $phone: 36em; /*576*/
-$tablet: 48em; /*768px*/
+$tablet: 50em; /*768px*/
 $desktop: 64em; /*1024px*/
-
 
 // Imports
 @import "normalize";
@@ -63,5 +102,7 @@ $desktop: 64em; /*1024px*/
 @import "social";
 @import "header";
 @import "navigation";
-@import "cards";
+@import "section";
+/*@import "content";*/
+@import "form";
 @import "footer";

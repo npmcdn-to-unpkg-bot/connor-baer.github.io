@@ -1,49 +1,54 @@
 .social {
-	padding-top: 1.5rem;
-	height: 6rem;
-	background-color: $primary;
+	padding: 0.75rem 1.75rem;
+	width: 100%;
+	max-width: 90rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.9);
 }
 
 .social-logo {
 	float: left;
 }
 
-.social-bear {
-	display: block;
-	width: 4rem;
-	height: 3rem;
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20498.26%20361.49%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M197.49%20360.51%20139.86%20361.49%20107.63%20340%20108.26%20244.08%2056.82%20335.55%2056.82%20335.55%2090.71%20360.51%2033.08%20361.49%200.81%20340%200%20337.03%2018.27%20203.55%2050.9%20122.98%20154.35%2064.5%20292.1%2064.5%20341.93%2036.76%20340%2019.52%20359.52%202.92%20378.1%2016.61%20425%200%20455.26%2014.68%20498.26%205.88%20498.26%2051.8%20458.22%2080.12%20433.8%20155.34%20390.53%20200.72%20433.8%20259.88%20429.85%20295.07%20392.73%20332.19%20396.64%20295.07%20339.01%20271.32%20308.71%20335.15%20346.82%20360.51%20289.19%20361.49%20256.96%20340%20255.97%20241.34%20187.57%20272.58%20161.18%20334.16%22%2F%3E%3C%2Fsvg%3E");
-	background-size: contain;
-	background-repeat: no-repeat;
-	&:hover, &:focus {
-		background-image: url("/assets/hover.png");
-	}
-}
-
 .social-links {
 	float: right;
-	padding: 0.25rem 0;
 }
 
 .social-icon {
-	height: 2.5rem;
-	width: 2.5rem;
-	padding: 0.5rem;
-	fill: #fff;
+	padding: 0.6rem;
 	margin-left: 1.5rem;
-	border: 2px solid transparent;
-	transition: border 0.2s ease-in-out;
+}
+
+.social-print, .social-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	transition: all 0.15s ease-in-out;
+	fill: $navigation-color;
 	&:hover, &:focus {
-		border: 2px solid white;
+	    transform: scale(1.25);
+	    fill: $secondary-7;
 	}
 }
 
-@media (max-width: $phone) {
-	.social-links {
-		padding: 0rem 0;
-	}
-	.social-icon {
-		height: 3rem;
-		width: 3rem;
-	}
+.headroom .social {
+  	position: fixed;
+  	transition: transform 0.2s ease-in-out, padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.headroom--top .social {
+  	padding: 1.5rem 1.75rem;
+  	background-color: transparent;
+}
+
+.headroom--pinned .social, .headroom--unpinned.headroom--bottom .social {
+  	transform: translateY(0%);
+}
+
+.headroom--unpinned .social {
+  	transform: translateY(-100%);
 }

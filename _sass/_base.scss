@@ -11,32 +11,21 @@
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: $normal;
-}
-@media (max-width: $phone) {
-  html {
-    font-size: 12px;
-  }
+  background-color: $gray-7;
 }
 
 body {
-  color: $body-color;
-  background-color: white;
-}
-
-.body-wrapper {
-  background-color: $gray-5;
+  color: $gray-7;
+  background-color: #fff;
   min-height: 100vh;
   min-width: 100vw;
-  max-width: 90rem;
-  margin: 0 auto;
 }
 
 ::-moz-selection {
-    color: white;
-    background: $gray-90;
+    color: $gray-7;
+    background: $primary-1;
 }
 ::selection {
-    color: white; 
-    background: $gray-90;
+    color: $gray-7; 
+    background: $primary-1;
 }
