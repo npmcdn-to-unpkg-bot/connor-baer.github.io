@@ -27,11 +27,12 @@
 .social-print, .social-icon {
 	width: 2.5rem;
 	height: 2.5rem;
-	transition: all 0.15s ease-in-out;
+	transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
 	fill: $navigation-color;
-	&:hover, &:focus {
-	    transform: scale(1.25);
-	    fill: $secondary-7;
+	&:hover,
+	&:focus {
+		transform: scale(1.25);
+	    fill: url(#svg-gradient-hover);
 	}
 }
 
