@@ -21,10 +21,13 @@ h2 {
 
 h3 {
   font-size: .825rem;
-  color: $primary-4;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
   margin-bottom: 0;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(45deg, $primary-4, $secondary-4);
 }
 
 h4 {
@@ -70,18 +73,24 @@ a {
   color: inherit;
 }
 
-a.link {
+a.link, .button {
   font-size: 1.0625rem;
   font-family: $sans;
   font-weight: $sans-normal;  
 }
 
-.post a, a.link {
+.post a,
+a.link,
+.button {
   color: $secondary-4;
   position: relative;
   z-index: 1;
   strong {
     color: inherit;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
   &:before {
     content: "";
@@ -151,7 +160,7 @@ strong, .strong {
     padding: 0 0.5rem 0 0.25rem; 
   }
 
-  a.link {
+  a.link, .button {
     font-size: 1.375rem;
   }
 }

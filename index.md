@@ -56,7 +56,7 @@ image: '/assets/cloud.jpg'
 
 <section class="section ctnr-golden">
   <h3 id="creating">creating</h3>
-  <div class="section-projects">
+  <div class="section-creating">
     {% assign projects = site.data.projects | sort: 'order' %}
     {% for project in projects %}
       <div class="section-project">
@@ -70,17 +70,19 @@ image: '/assets/cloud.jpg'
 
 <section class="section ctnr-golden">
   <h3 id="writing">Writing</h3>
-  {% for post in site.posts | limit: 3 %}
-  <a href="{{ post.medium }}" class="post-link" target="_blank">
-    <h2 class="post-header">{{ post.title }}</h2>
-    <div class="section-post">
-      <p class="post-text">{{ post.content | strip_html | truncatewords: 28 }}</p>
-      {% if post.thumb %}
-      <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
-      {% endif %}
-    </div>
-  </a>
-  {% endfor %}
+  <div class="section-writing">
+    {% for post in site.posts | limit: 3 %}
+    <a href="{{ post.medium }}" class="post-link" target="_blank">
+      <h2 class="post-header">{{ post.title }}</h2>
+      <div class="section-post">
+        <p class="post-text">{{ post.content | strip_html | truncatewords: 28 }}</p>
+        {% if post.thumb %}
+        <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
   <a href="https://blog.connorbaer.io/" class="link section-medium" target="_blank">Read more on Medium →</a>
 </section>
 
@@ -102,6 +104,6 @@ image: '/assets/cloud.jpg'
     <input type="hidden" name="_subject" value="Someone wants to say hello" />
     <input type="hidden" name="_next" value="//connorbaer.io/success/" />
     <input type="text" name="_gotcha" style="display:none" />
-    <button class="button" type="submit">Send and smile!</button>
+    <button class="button" type="submit">Send and smile →</button>
   </form>
 </section>
