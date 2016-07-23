@@ -13,7 +13,7 @@ var src         = ''                // The raw material of the theme: custom scr
 module.exports = {
 
   browsersync: {
-    files: [dist+'/**', '!'+dist+'/**.map'] // Exclude map files
+    files: [dist+'/**', '!'+dist+'/**.map', '!'+dist+'**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'] // Exclude map files
   , notify: false // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
   , open: false // Set to false if you don't like the browser window opening automatically
   , port: 4000 // Port number for the live version of the site; default: 3000
@@ -27,7 +27,7 @@ module.exports = {
 
   images: {
     dist: {
-      src: [dist+'**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)', '!'+dist+'screenshot.png'] // The source is actually `dist` since we are minifying images in place
+      src: [dist+'**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'] // The source is actually `dist` since we are minifying images in place
     , imagemin: {
         optimizationLevel: 7
       , progressive: true
@@ -68,7 +68,7 @@ module.exports = {
 
   styles: {
     build: {
-      src: src+'_scss/**/*.scss'
+      src: src+'scss/**/*.scss'
     , dest: assets
     }
   , cssnano: {
@@ -90,7 +90,7 @@ module.exports = {
     clean: [dist+'**/.DS_Store'] // A glob pattern matching junk files to clean out of `build`; feel free to add to this array
   , wipe: [dist] // Clean this out before creating a new distribution copy
   , dist: {
-      src: [build+'**/*', '!'+build+'**/*.map']
+      src: [dist+'**/*', '!'+dist+'**/*.map']
     , dest: dist
     }
   , normalize: { // Copies `normalize.css` from `node_modules` to `src/scss` and renames it to allow for it to imported as a Sass file

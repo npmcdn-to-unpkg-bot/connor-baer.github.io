@@ -1,6 +1,7 @@
 // ==== BROWSERSYNC ==== //
 
 var gulp        = require('gulp')
+  , gutil       = require('gulp-util')
   , child       = require('child_process')
   , config      = require('../../gulpconfig').jekyll
 ;
