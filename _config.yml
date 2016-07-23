@@ -14,7 +14,7 @@ gems:
 
 # Settings
 color:                '#fff'
-exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
+exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, js, sass, gulpfile.js, node_modules]
 sass:
   sass_dir:           _sass
   style:              compressed
