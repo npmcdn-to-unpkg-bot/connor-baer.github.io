@@ -47,35 +47,35 @@ image: '/assets/cloud.jpg'
   </div>
 </header>
 
-<!-- <section class="section ctnr-golden">
-  <h3 id="about">About</h3>
+<!-- <section class="section">
+  <h3 id="about" class="section-title">About</h3>
   <h1>We love people who love making things… and cheese!</h1>
   <h4>{{ site.tagline }}</h4>
-  <a class="link" href="/process">Learn about my work process →</a>
+  <a class="section-link" href="/process">Learn about my work process →</a>
 </section> -->
 
-<section class="section ctnr-golden">
-  <h3 id="creating">creating</h3>
+<section class="section">
+  <h3 id="creating" class="section-title">creating</h3>
   <div class="section-creating">
     {% assign projects = site.data.projects | sort: 'order' %}
     {% for project in projects %}
       <div class="section-project">
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-        <a href="{{ project.url }}" class="link" target="_blank">{{ project.cta }} →</a>
+        <h2 class="section-header">{{ project.title }}</h2>
+        <p class="section-body">{{ project.description }}</p>
+        <a href="{{ project.url }}" class="section-link" target="_blank">{{ project.cta }} →</a>
       </div>
     {% endfor %}
   </div>
 </section>
 
-<section class="section ctnr-golden">
-  <h3 id="writing">Writing</h3>
+<section class="section">
+  <h3 id="writing" class="section-title">Writing</h3>
   <div class="section-writing">
     {% for post in site.posts | limit: 3 %}
     <a href="{{ post.medium }}" class="post-link" target="_blank">
-      <h2 class="post-header">{{ post.title }}</h2>
+      <h2 class="section-header post-header">{{ post.title }}</h2>
       <div class="section-post">
-        <p class="post-text">{{ post.content | strip_html | truncatewords: 28 }}</p>
+        <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 30 }}</p>
         {% if post.thumb %}
         <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
         {% endif %}
@@ -83,11 +83,11 @@ image: '/assets/cloud.jpg'
     </a>
     {% endfor %}
   </div>
-  <a href="https://blog.connorbaer.io/" class="link section-medium" target="_blank">Read more on Medium →</a>
+  <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank">Read more on Medium →</a>
 </section>
 
-<section class="section ctnr-golden">
-  <h3 id="contact">Contact</h3>
+<section class="section">
+  <h3 id="contact" class="section-title">Contact</h3>
   <form action="//formspree.io/hello@connorbaer.io" method="POST">
     <div class="section-inputs">
       <div class="section-input">
@@ -104,6 +104,6 @@ image: '/assets/cloud.jpg'
     <input type="hidden" name="_subject" value="Someone wants to say hello" />
     <input type="hidden" name="_next" value="//connorbaer.io/success/" />
     <input type="text" name="_gotcha" style="display:none" />
-    <button class="button" type="submit">Send and smile →</button>
+    <button class="section-link button" type="submit">Send and smile →</button>
   </form>
 </section>

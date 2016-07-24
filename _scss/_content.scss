@@ -1,0 +1,18 @@
+// 404
+
+.content-header {
+	padding-top: vr(6);
+	padding-bottom: vr(2);
+	.header-icon {
+		display: block;
+		margin: 0 auto;
+		width: 25%;
+		height: 25%;
+		fill: url(#icon-gradient);
+	}
+}
+
+.link {
+	@include gradient-underline(90deg, gray, palette(gray, dark));
+	color: palette(gray, dark);
+}

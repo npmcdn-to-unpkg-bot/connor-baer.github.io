@@ -1,0 +1,89 @@
+// ==== LIBRARY ==== //
+
+/* Mixins, functions, and other non-declarative things */
+
+/*
+ * 1. Settings
+ * 2. Gradients
+ * 3. Borders, Underlines & Overlays
+ */
+
+
+// 1. Settings //
+
+/* 
+ * A simple function to retrieve a color from the palette.
+ * Adapted from http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/ 
+ */
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($_palettes, $palette), $tone);
+}
+
+/* A simple function to retrieve theme metadata */
+@function metadata($request) {
+  @return map-get($_metadata, $request);
+}
+
+
+
+// 2. Gradients //
+
+@function gradient($direction, $color-stops...) {
+  @return linear-gradient($direction, $color-stops);
+}
+
+
+
+// 3. Borders, Underlines & Overlays //
+
+$border-gray: 1px solid palette(gray, light);
+$border-grey: $border-gray;
+
+@mixin border() {
+  @include mappy-bp(small) {
+    border: 1px solid palette(gray, light);
+    padding: vr(0.75) vr(1);
+  }
+}
+
+@mixin gradient-border($direction, $color-stops...) {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    background-color: nth($color-stops, 1);
+    background-image: gradient($direction, $color-stops);
+    width: 100%;
+    height: 3px;
+  }
+}
+
+@mixin gradient-underline($direction, $color, $color-stops...) {
+  position: relative;
+  z-index: 1;
+  color: palette($color);
+  display: inline-block;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: nth($color-stops, 1);
+    background-image: gradient($direction, $color-stops);
+    visibility: hidden;
+    transform: translate(0px,3px);
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: visibility .15s ease-in-out, opacity .15s ease-in-out, transform .15s ease-in-out;
+  }
+  &:hover:after {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0px,-1px);
+  }
+}

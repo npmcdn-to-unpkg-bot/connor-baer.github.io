@@ -14,12 +14,12 @@
 }
 
 .header-text {
-	font-size: 3.5rem;
+	font-size: 56px;
 	font-family: $sans;
     font-weight: $sans-bold;
 }
 
-@media (max-width: $phone) {
+@include mappy-query(phone) {
 	.header {
 		background-position: 20% 50%;
 	}
@@ -37,10 +37,10 @@
 	}
 }
 
-@media (min-width: $phone) {
+@include mappy-bp(small) {
 	.header-large {
 		display: block;
-		width: 32rem;
+		width: 24rem;
 		max-width: 80%;
 		margin: 0 auto;
 		position: absolute;

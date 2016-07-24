@@ -1,7 +1,7 @@
 .social {
-	padding: 0.75rem 1.75rem;
-	width: 100%;
-	max-width: 90rem;
+	@include ctnr(wide);
+	padding-top: vr(0.5);
+  	padding-bottom: vr(0.5);
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -9,6 +9,10 @@
 	z-index: 9999;
 	margin: 0 auto;
 	background-color: rgba(255, 255, 255, 0.9);
+	@include mappy-query(phone) {
+		padding-right: vr(1);
+    	padding-left: vr(1);
+	}
 }
 
 .social-logo {
@@ -20,15 +24,16 @@
 }
 
 .social-icon {
-	padding: 0.6rem;
-	margin-left: 1.5rem;
+	padding: 12px;
+	margin-left: 24px;
 }
 
-.social-print, .social-icon {
-	width: 2.5rem;
-	height: 2.5rem;
-	transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
-	fill: $navigation-color;
+.social-print,
+.social-icon {
+	width: 48px;
+	height: 48px;
+	transition: transform 0.1s ease-out, fill 0.1s ease-out;
+	fill: palette(gray, darker);
 	&:hover,
 	&:focus {
 		transform: scale(1.25);
@@ -42,11 +47,13 @@
 }
 
 .headroom--top .social {
-  	padding: 1.5rem 1.75rem;
+  	padding-top: vr(1);
+  	padding-bottom: vr(1);
   	background-color: transparent;
 }
 
-.headroom--pinned .social, .headroom--unpinned.headroom--bottom .social {
+.headroom--pinned .social,
+.headroom--unpinned.headroom--bottom .social {
   	transform: translateY(0%);
 }
 

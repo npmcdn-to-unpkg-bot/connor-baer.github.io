@@ -13,22 +13,33 @@
 }
 
 .nav-link {
-	font-family: $sans;
-	font-weight: $sans-bold;
-	font-size: 1.125rem;
-	padding: .2rem .5rem .25rem;
-	text-transform: lowercase;
-	letter-spacing: .075rem;
-	color: $navigation-color;
-	transition: color .12s ease-out;
+	@include font(header3);
+	color: palette(gray, darker);
+	position: relative;
+	z-index: 100;
+	transition: color .1s ease-out;
+	&:before {
+	    background: linear-gradient(45deg, palette(pink), palette(orange));
+	    content: '';    
+	    display: block;
+	    height: 100%;
+	    position: absolute;
+	    top: 0; left: 0;
+	    opacity: 0;
+	    width: 100%;
+	    z-index: -100;
+	    transition: opacity .1s ease-out;
+	}
 	&:hover,
 	&:focus {
-		color: $secondary-7;
+		color: #fff;
+		&:before {
+			opacity: 1;
+		}
 	}
 }
 
-
-@media (min-width: $phone) {
+@include mappy-query(desktop) {
 	.nav-small {
 		display: none;
 	}
@@ -36,7 +47,7 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		padding: 2rem 0;
+		padding: vr(1) 0;
 		display: block;
 		margin: 0 auto;
 		list-style: none;
@@ -44,18 +55,18 @@
 		width: 100vw;
 	}
 	.nav-item {
-		margin: 0 1.125rem;
+		margin: 0 vr(.5);
 		padding: 0;
 		display: inline-block;
 	}
 	.headroom .nav-large {
 		z-index: 9999;
-		transition: transform 0.25s ease-in-out, padding 0.25s ease-in-out, background-color 0.25s ease-in-out;
+		transition: transform 0.2s ease-in-out, padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	}
 
 	.headroom--not-top .nav-large {
 		background-color: rgba(255, 255, 255, 0.9);
-		padding: 1rem 0;
+		padding: vr(.5) 0;
 	}
 
 	.headroom--pinned .nav-large {

@@ -1,20 +1,17 @@
 label {
 	display: block;
-	margin-top: 1.25em;
+	margin-top: vr(1);
 }
 
 input, textarea {
-	padding: 0.5rem 1rem;
+	@include font(body);
+	padding: vr(.5) vr(1);
 	border: 1px solid transparent;
-	border-image: linear-gradient(to bottom right, $gray-1, $gray-1 100%);
+	border-image: linear-gradient(to bottom right, palette(gray, lighter), palette(gray, lighter) 100%);
 	border-image-slice: 1;
 	background-color: #fff;
-  	font-family: $serif;
-  	font-size: 1.0625rem;
-  	font-weight: $serif-normal;
-	line-height: 1.5em;
 	outline: none;
-	margin: 0.3em 0;
+	margin: vr(.5) 0;
 	width: 100%;
 	text-align: left;
 	width: 100%;
@@ -23,7 +20,7 @@ input, textarea {
 	&:focus,
 	&:active,
 	&:hover {
-		border-image: linear-gradient(to bottom right, $primary-4, $secondary-4 100%);
+		border-image: linear-gradient(to bottom right, palette(pink), palette(orange) 100%);
 		border-image-slice: 1;
 	}
 }
@@ -40,10 +37,4 @@ textarea {
 	padding: 0;
 	text-decoration: none;
 	background-color: #fff;
-}
-
-@media (min-width: $phone) {
-	input, textarea {
-	  	font-size: 1.375rem;
-	}
 }

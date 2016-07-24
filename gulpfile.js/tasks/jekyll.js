@@ -1,25 +1,18 @@
-// ==== BROWSERSYNC ==== //
+var gulp        = require('gulp');
+var cp          = require('child_process');
+var browsersync = require('browser-sync');
+var config      = require('../../gulpconfig').jekyll;
 
-var gulp        = require('gulp')
-  , gutil       = require('gulp-util')
-  , child       = require('child_process')
-  , config      = require('../../gulpconfig').jekyll
-;
+/**
+ * Build the Jekyll Site
+ */
+gulp.task('jekyll', function(done) {
+  browsersync.notify('Compiling Jekyll');
 
-// Quick start: connect all your devices to the same network (e.g. wifi) and navigate to the address output in the console when you run `gulp`
-gulp.task('jekyll', ['build'], function() {
-  var jekyll = child.spawn('jekyll', ['build',
-    '--watch',
-    '--incremental',
-    '--drafts'
-  ]);
+  return cp.spawn('jekyll', ['build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], { stdio: 'inherit' })
+  .on('close', done);
+});
 
-  var jekyllLogger = (buffer) => {
-    buffer.toString()
-      .split(/\n/)
-      .forEach((message) => gutil.log('Jekyll: ' + message));
-  };
-
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
+gulp.task('jekyll-rebuild', ['jekyll'], function() {
+  browsersync.reload();
 });

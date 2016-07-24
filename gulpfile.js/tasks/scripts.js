@@ -1,5 +1,3 @@
-// ==== SCRIPTS ==== //
-
 var gulp        = require('gulp')
   , plugins     = require('gulp-load-plugins')({ camelize: true })
   , merge       = require('merge-stream')
