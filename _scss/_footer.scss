@@ -5,7 +5,7 @@
 }
 
 .footer-text {
-	@include font(small);
+	@include font(header3);
 	text-align: center;
 	color: palette(gray, dark);
 	a {

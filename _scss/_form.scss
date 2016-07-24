@@ -5,7 +5,7 @@ label {
 
 input, textarea {
 	@include font(body);
-	padding: vr(.5) vr(1);
+	padding: vr(.25) vr(.75);
 	border: 1px solid transparent;
 	border-image: linear-gradient(to bottom right, palette(gray, lighter), palette(gray, lighter) 100%);
 	border-image-slice: 1;
