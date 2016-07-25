@@ -33,7 +33,7 @@
 	width: 48px;
 	height: 48px;
 	transition: transform 0.1s ease-out, fill 0.1s ease-out;
-	fill: palette(gray, darker);
+	fill: palette(gray, dark);
 	&:hover,
 	&:focus {
 		transform: scale(1.25);

@@ -7,9 +7,9 @@
 .footer-text {
 	@include font(header3);
 	text-align: center;
-	color: palette(gray, dark);
+	color: palette(gray);
 	a {
-		@include gradient-underline(90deg, gray, palette(gray, dark));
-		color: palette(gray, dark);
+		@include gradient-underline(90deg, gray, palette(gray));
+		color: palette(gray);
 	}
 }

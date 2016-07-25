@@ -14,7 +14,7 @@
 
 .nav-link {
 	@include font(header3);
-	color: palette(gray, darker);
+	color: palette(gray, dark);
 	position: relative;
 	z-index: 100;
 	transition: color .1s ease-out;
