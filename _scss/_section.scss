@@ -38,6 +38,9 @@ h2.section-header {
 
 .section-link {
 	@include gradient-underline(90deg, orange, palette(orange));
+	&.large {
+      font-size: ms(1);
+    }
 }
 
 .section-input {

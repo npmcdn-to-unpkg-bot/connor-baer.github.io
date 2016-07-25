@@ -47,15 +47,17 @@ image: '/assets/cloud.jpg'
   </div>
 </header>
 
-<!-- <section class="section">
-  <h3 id="about" class="section-title">About</h3>
-  <h1>We love people who love making things… and cheese!</h1>
-  <h4>{{ site.tagline }}</h4>
-  <a class="section-link" href="/process">Learn about my work process →</a>
+<!-- <section id="about" class="section">
+  <h3 class="section-title">About</h3>
+  <article>
+    <h1 class="section-header">I love people who love making things… and sushi!</h1>
+    <h4 class="section-body large">{{ site.tagline }}</h4>
+    <a class="section-link" href="/process">Learn about my work process →</a>
+  </article>
 </section> -->
 
-<section class="section">
-  <h3 id="creating" class="section-title">creating</h3>
+<section id="creating" class="section">
+  <h3 class="section-title">creating</h3>
   <div class="section-creating">
     {% assign projects = site.data.projects | sort: 'order' %}
     {% for project in projects %}
@@ -68,26 +70,28 @@ image: '/assets/cloud.jpg'
   </div>
 </section>
 
-<section class="section">
-  <h3 id="writing" class="section-title">Writing</h3>
+<section id="writing" class="section">
+  <h3 class="section-title">Writing</h3>
   <div class="section-writing">
     {% for post in site.posts | limit: 3 %}
-    <a href="{{ post.medium }}" class="post-link" target="_blank">
-      <h2 class="section-header post-header">{{ post.title }}</h2>
-      <div class="section-post">
-        <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 30 }}</p>
-        {% if post.thumb %}
-        <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
-        {% endif %}
-      </div>
-    </a>
+    <article>
+      <a href="{{ post.medium }}" class="post-link" target="_blank">
+        <h2 class="section-header post-header">{{ post.title }}</h2>
+        <div class="section-post">
+          <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 30 }}</p>
+          {% if post.thumb %}
+          <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
+          {% endif %}
+        </div>
+      </a>
+    </article>
     {% endfor %}
   </div>
   <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank">Read more on Medium →</a>
 </section>
 
-<section class="section">
-  <h3 id="contact" class="section-title">Contact</h3>
+<section id="contact" class="section">
+  <h3 class="section-title">Contact</h3>
   <form action="//formspree.io/hello@connorbaer.io" method="POST">
     <div class="section-inputs">
       <div class="section-input">
@@ -96,7 +100,7 @@ image: '/assets/cloud.jpg'
       </div>
       <div class="section-input">
         <label for="_replyto">What’s your email address?</label>
-        <input type="email" name="_replyto" placeholder="jane@example.com" required>
+        <input type="email" name="_replyto" placeholder="jane@example.com" required pattern="[^ @]*@[^ @]*\.[a-zA-Z]{2,}">
       </div>
     </div>
     <label for="message">What can I do for you?</label>

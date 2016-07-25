@@ -14,7 +14,7 @@ gulp.task('styles-libsass', function() {
   .pipe(plugins.sass(config.libsass))
   .pipe(plugins.cssnano(config.cssnano))
   .pipe(plugins.sourcemaps.write('./'))
-  .pipe(gulp.dest('_site/'+config.build.dest))
+  .pipe(gulp.dest(config.build.dist+config.build.dest))
   .pipe(gulp.dest(config.build.dest));
 });
 

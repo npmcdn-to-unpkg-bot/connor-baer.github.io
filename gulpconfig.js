@@ -60,6 +60,7 @@ module.exports = {
     build: {
       src: src+'_scss/**/*.scss'
     , dest: assets
+    , dist: dist
     }
   , cssnano: {
       autoprefixer: {
@@ -98,6 +99,7 @@ module.exports = {
       src: assets+'**/*.js'
     , uglify: {} // Default options
     , dest: assets
+    , dist: dist
     }
   },
 
