@@ -20,7 +20,7 @@ module.exports = {
   , files: [dist + '**/*']
   , port: 4000 // Port number for the live version of the site; jekyll default: 4000
   , notify: false // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
-  , ui: false
+  , ui: false // Set to false if you don't need the browsersync UI
   , open: false // Set to false if you don't like the browser window opening automatically
   , watchOptions: {
       debounceDelay: 2000 // This introduces a small delay when watching for file change events to avoid triggering too many reloads

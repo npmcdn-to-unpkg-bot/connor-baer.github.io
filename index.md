@@ -6,7 +6,7 @@ image: '/assets/cloud.jpg'
 
 <nav>
   {% include navigation.html %}
-</nav>
+</nav> 
 <header>
   <div class="header" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
     <svg class="header-large" viewBox="0 0 450 75">
