@@ -32,7 +32,7 @@
 .social-icon {
 	width: 48px;
 	height: 48px;
-	transition: transform 0.1s ease-out, fill 0.1s ease-out;
+	transition: transform $short, fill $short;
 	fill: palette(gray, dark);
 	&:hover,
 	&:focus {
@@ -43,7 +43,7 @@
 
 .headroom .social {
   	position: fixed;
-  	transition: transform 0.2s ease-in-out, padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  	transition: transform $long, padding $long, background-color $long;
 }
 
 .headroom--top .social {

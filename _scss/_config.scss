@@ -6,6 +6,7 @@
  * 1. Breakpoints
  * 2. Typography
  * 3. Colors
+ * 4. Transition
  */
 
 
@@ -102,3 +103,10 @@ $_palettes: (
         darker:  #1F1F1F
     )
 );
+
+
+
+// 4. Transitions //
+
+$short: .12s ease-in-out;
+$long: .24s ease-in-out;

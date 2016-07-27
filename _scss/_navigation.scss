@@ -17,7 +17,7 @@
 	color: palette(gray, dark);
 	position: relative;
 	z-index: 100;
-	transition: color .1s ease-out;
+	transition: color $short;
 	&:before {
 	    background: linear-gradient(45deg, palette(pink), palette(orange));
 	    content: '';    
@@ -28,7 +28,7 @@
 	    opacity: 0;
 	    width: 100%;
 	    z-index: -100;
-	    transition: opacity .1s ease-out;
+	    transition: opacity $short;
 	}
 	&:hover,
 	&:focus {
@@ -61,7 +61,7 @@
 	}
 	.headroom .nav-large {
 		z-index: 9999;
-		transition: transform 0.2s ease-in-out, padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: transform $long, padding $long, background-color $long;
 	}
 
 	.headroom--not-top .nav-large {

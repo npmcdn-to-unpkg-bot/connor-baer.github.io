@@ -6,9 +6,7 @@ label {
 input, textarea {
 	@include font(body);
 	padding: vr(.25) vr(.75);
-	border: 1px solid transparent;
-	border-image: linear-gradient(to bottom right, palette(gray, lighter), palette(gray, lighter) 100%);
-	border-image-slice: 1;
+	border: 1px solid palette(gray, light);
 	background-color: #fff;
 	outline: none;
 	margin: vr(.5) 0;
@@ -16,12 +14,15 @@ input, textarea {
 	text-align: left;
 	width: 100%;
 	resize: none;
-	transition: all 0.15s ease-in-out;
+	transition: border $short, box-shadow $short;
 	&:focus,
 	&:active,
 	&:hover {
-		border-image: linear-gradient(to bottom right, palette(pink), palette(orange) 100%);
-		border-image-slice: 1;
+		border: 1px solid palette(orange);
+	}
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 5px 1px palette(orange, light);
 	}
 }
 

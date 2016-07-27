@@ -63,7 +63,7 @@ $border-grey: $border-gray;
   z-index: 1;
   color: palette($color);
   display: inline-block;
-  transition: color 0.15s ease-in-out;
+  transition: color $short;
   cursor: pointer;
   &:after {
     content: "";
@@ -79,7 +79,7 @@ $border-grey: $border-gray;
     transform: translate(0px,3px);
     opacity: 0;
     backface-visibility: hidden;
-    transition: visibility .15s ease-in-out, opacity .15s ease-in-out, transform .15s ease-in-out;
+    transition: visibility $short, opacity $short, transform $short;
   }
   &:hover:after {
     visibility: visible;
