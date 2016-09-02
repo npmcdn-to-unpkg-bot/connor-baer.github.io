@@ -1,0 +1,41 @@
+label {
+	display: block;
+	margin-top: vr(1);
+}
+
+input, textarea {
+	@include font(body);
+	padding: vr(.25) vr(.75);
+	border: 1px solid palette(gray, light);
+	background-color: #fff;
+	outline: none;
+	margin: vr(.5) 0;
+	width: 100%;
+	text-align: left;
+	width: 100%;
+	resize: none;
+	transition: border $short, box-shadow $short;
+	&:focus,
+	&:active,
+	&:hover {
+		border: 1px solid palette(orange);
+	}
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 5px 1px palette(orange, light);
+	}
+}
+
+textarea {
+	resize: vertical;
+}
+
+.button {
+	display: block;
+	outline: none;
+	border: none;
+	font-family: $sans;
+	padding: 0;
+	text-decoration: none;
+	background-color: #fff;
+}

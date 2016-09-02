@@ -14,7 +14,7 @@ gems:
 
 # Settings
 color:                '#fff'
-exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
+exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, gulpfile.js, node_modules]
 sass:
   sass_dir:           _sass
   style:              compressed
@@ -23,7 +23,7 @@ permalink:            /:title/
 
 # Site meta
 title:                Made by Connor.
-tagline:              'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently working for Deutsche Stiftung UWC.'
+tagline:              'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently looking for projects in London this autumn.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
 description:          'Designer, developer & traveller. Embrace change.'
 url:                  http://connorbaer.io

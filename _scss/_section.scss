@@ -1,0 +1,108 @@
+.section {
+	@include ctnr(golden);
+	margin-bottom: vr(2);
+}
+
+.section-title {
+	@include font(header3);
+	color: #fff;
+	display: inline-block;
+    margin-top: vr(1);
+	margin-bottom: vr(.5);
+    background: linear-gradient(45deg, palette(pink), palette(orange));
+}
+
+.section-creating, .section-inputs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.section-project {
+	margin-bottom: vr(1);
+	width: 100%;
+}
+
+h1.section-header {
+	@include font(header1);
+}
+
+h2.section-header {
+	@include font(header2);
+}
+
+.section-body {
+	@include font(body);
+}
+
+.section-link {
+	@include gradient-underline(90deg, orange, palette(orange));
+	&.large {
+      font-size: ms(1);
+    }
+}
+
+.section-input {
+	width: 100%;
+}
+
+.section-post {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.post-header {
+	@include gradient-underline(90deg, gray, palette(gray, dark));
+	color: palette(gray, dark);
+}
+
+.post-body {
+	width: 80%;
+	order: 2;
+}
+
+.post-image {
+	width: 15%;
+	padding-bottom: 15%;
+	height: 100%;
+	background: 50% 50% / cover;
+	order: 3;
+}
+
+.post-medium {
+	margin-top: vr(1);
+	margin-bottom: vr(1);
+	display: inline-block;
+}
+
+@include mappy-query(phone) {
+	.post-body {
+		width: 100%;
+	}
+
+	.post-image {
+		width: 100%;
+		height: vr(6);
+		margin: vr(.5) 0 vr(1);
+		order: 1;
+	}
+}
+
+@include mappy-bp(small) {
+	.section {
+		margin-bottom: vr(3);
+	}
+
+	.section-project {
+		width: 45%;
+	}
+}
+
+@include mappy-query(desktop) {
+	.section-input {
+		width: 45%;
+	}
+}

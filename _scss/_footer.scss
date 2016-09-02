@@ -1,0 +1,15 @@
+.footer {
+	@include ctnr(golden);
+	padding-top: vr(1);
+	padding-bottom: vr(1);
+}
+
+.footer-text {
+	@include font(header3);
+	text-align: center;
+	color: palette(gray);
+	a {
+		@include gradient-underline(90deg, gray, palette(gray));
+		color: palette(gray);
+	}
+}
