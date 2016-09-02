@@ -12,12 +12,11 @@ var headroom  = new Headroom(hrBody, {
         down: 5
     }
 });
+// initialise
+headroom.init();
 
 
 // SMOOTHSCROLL //
-
-// initialise
-headroom.init();
 
 smoothScroll.init({
 	easing: 'easeInOutCubic', // Easing pattern to use

@@ -7,8 +7,8 @@ image: '/assets/cloud.jpg'
 <nav>
   {% include navigation.html %}
 </nav> 
-<header>
-  <div class="header" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
+<header class="header">
+  <div class="header-background" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
     <svg class="header-large" viewBox="0 0 450 75">
       <defs>
         <g id="text-large">
