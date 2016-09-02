@@ -64,7 +64,7 @@ image: '/assets/cloud.jpg'
       <div class="section-project">
         <h2 class="section-header">{{ project.title }}</h2>
         <p class="section-body">{{ project.description }}</p>
-        <a href="{{ project.url }}" class="section-link" target="_blank">{{ project.cta }} →</a>
+        <a href="{{ project.url }}" class="section-link" target="_blank" rel="noopener noreferrer">{{ project.cta }} →</a>
       </div>
     {% endfor %}
   </div>
@@ -75,7 +75,7 @@ image: '/assets/cloud.jpg'
   <div class="section-writing">
     {% for post in site.posts | limit: 3 %}
     <article>
-      <a href="{{ post.medium }}" class="post-link" target="_blank">
+      <a href="{{ post.medium }}" class="post-link" target="_blank" rel="noopener noreferrer">
         <h2 class="section-header post-header">{{ post.title }}</h2>
         <div class="section-post">
           <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 30 }}</p>
@@ -87,7 +87,7 @@ image: '/assets/cloud.jpg'
     </article>
     {% endfor %}
   </div>
-  <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank">Read more on Medium →</a>
+  <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank" rel="noopener noreferrer">Read more on Medium →</a>
 </section>
 
 <section id="contact" class="section">
