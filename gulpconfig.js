@@ -88,7 +88,8 @@ module.exports = {
       ]
     , navigation: [
         bower+'smooth-scroll/dist/js/smooth-scroll.js',
-        bower+'headroom.js/dist/headroom.js'
+        bower+'headroom.js/dist/headroom.js',
+        modules+'turbolinks/dist/turbolinks.js'
       ]
     }
   , dest: assets // Where the scripts end up in your theme
