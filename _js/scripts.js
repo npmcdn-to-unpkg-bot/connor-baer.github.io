@@ -20,4 +20,5 @@ headroom.init();
 
 smoothScroll.init({
 	easing: 'easeInOutCubic', // Easing pattern to use
+	offset: 70,  // How far to offset the scrolling anchor location in pixels
 });

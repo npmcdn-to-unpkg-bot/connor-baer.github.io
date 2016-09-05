@@ -11,7 +11,7 @@
 
 
 
- // 1. Breakpoints //
+// 1. Breakpoints //
 
 $breakpoints: (
   small: 576px,
@@ -53,15 +53,20 @@ $typi: (
 
 // 3. Colors //
 
-$base-pink: #DD2476;
+$base-pink: #DA1884;
 $base-orange: #FF512F;
+$base-turquoise: #40E0D0;
+
 $base-blue: #2979FF;
 $base-violet: #D500F9;
+$base-red: red;
 $base-green: #00E676;
 $base-yellow: #FFEA00;
 
-$factor-lighten: 8%;
-$factor-darken: 8%;
+$factor-lighter: 49%;
+$factor-light: 7%;
+$factor-dark: 5%;
+$factor-darker: 28%;
 
 /*
  * Sass map for the color palette; see `_library.scss` for the palette() function. 
@@ -69,40 +74,71 @@ $factor-darken: 8%;
 $_palettes: (
     pink: (
         base:  $base-pink,
-        light: lighten($base-pink, $factor-lighten),
-        dark:  darken($base-pink, $factor-darken)
+        lighter: lighten($base-pink, $factor-lighter),
+        light: lighten($base-pink, $factor-light),
+        dark:  darken($base-pink, $factor-dark),
+        darker: darken($base-pink, $factor-darker)
     ),
     orange: (
+        lighter: lighten($base-orange, $factor-lighter),
         base:  $base-orange,
-        light: lighten($base-orange, $factor-lighten),
-        dark:  darken($base-orange, $factor-darken)
+        light: lighten($base-orange, $factor-light),
+        dark:  darken($base-orange, $factor-dark),
+        darker: darken($base-orange, $factor-darker)
+    ),
+    turquoise: (
+        lighter: lighten($base-turquoise, $factor-lighter),
+        base:  $base-turquoise,
+        light: lighten($base-turquoise, $factor-light),
+        dark:  darken($base-turquoise, $factor-dark),
+        darker: darken($base-turquoise, $factor-darker)
     ),
     blue: (
+        lighter: lighten($base-blue, $factor-lighter),
         base:  $base-blue,
-        light: lighten($base-blue, $factor-lighten),
-        dark:  darken($base-blue, $factor-darken)
+        light: lighten($base-blue, $factor-light),
+        dark:  darken($base-blue, $factor-dark),
+        darker: darken($base-blue, $factor-darker)
     ),
     violet: (
+        lighter: lighten($base-violet, $factor-lighter),
         base:  $base-violet,
-        light: lighten($base-violet, $factor-lighten),
-        dark:  darken($base-violet, $factor-darken)
+        light: lighten($base-violet, $factor-light),
+        dark:  darken($base-violet, $factor-dark),
+        darker: darken($base-violet, $factor-darker)
+    ),
+    red: (
+        lighter: lighten($base-red, $factor-lighter),
+        base:  $base-red,
+        light: lighten($base-red, $factor-light),
+        dark:  darken($base-red, $factor-dark),
+        darker: darken($base-red, $factor-darker)
     ),
     green: (
+        lighter: lighten($base-green, $factor-lighter),
         base:  $base-green,
-        light: lighten($base-green, $factor-lighten),
-        dark:  darken($base-green, $factor-darken)
+        light: lighten($base-green, $factor-light),
+        dark:  darken($base-green, $factor-dark),
+        darker: darken($base-green, $factor-darker)
     ),
     yellow: (
+        lighter: lighten($base-yellow, $factor-lighter),
         base:  $base-yellow,
-        light: lighten($base-yellow, $factor-lighten),
-        dark:  darken($base-yellow, $factor-darken)
+        light: lighten($base-yellow, $factor-light),
+        dark:  darken($base-yellow, $factor-dark),
+        darker: darken($base-yellow, $factor-darker)
     ),
     gray: (
-        base:    #707070,
-        lighter: #CCCCCC,
-        light:   #D6D6D7,
-        dark:    #444444,
-        darker:  #1F1F1F
+        base:    #666,
+        lighter: #FAFAFA,
+        light:   #CCC,
+        dark:    #333,
+        darker:  #1A1A1A
+    ),
+    white: (
+        base:    #fff,
+        light:   #fff,
+        dark:    #fff
     )
 );
 
@@ -110,5 +146,5 @@ $_palettes: (
 
 // 4. Transitions //
 
-$short: .12s ease-in-out;
-$long: .24s ease-in-out;
+$short: .15s cubic-bezier(0,0,.2,1);
+$long: .3s cubic-bezier(0,0,.2,1);

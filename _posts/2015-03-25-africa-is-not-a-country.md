@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Africa is not a country.
-image: '/img/zebra.jpg'
-thumb: '/img/zebra-thumb.jpg'
-medium: 'https://blog.connorbaer.io/africa-is-not-a-country-b2e9d452b2eb'
+image: 'zebra'
+medium: 'africa-is-not-a-country-b2e9d452b2eb'
+metabar: dark
 ---
 
 [Why is Africa not a country?](https://answers.yahoo.com/question/index?qid=20061027224128AAFtJ8D) Guess what, it’s a continent. It consists of 55 individual countries, yet western journalists insist on [referring to it as one place](http://www.theguardian.com/world/2014/jan/24/africa-clinton).

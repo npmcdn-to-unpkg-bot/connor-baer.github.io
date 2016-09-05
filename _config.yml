@@ -22,8 +22,8 @@ permalink:            /:title/
 
 
 # Site meta
-title:                Made by Connor.
-tagline:              'Hello! I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. Currently looking for projects in London this autumn.'
+title:                'Made by Connor.'
+tagline:              'I love solving design and coding challenges. I am a digital nomad currently open for projects in London this fall.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire'
 description:          'Designer, developer & traveller. Embrace change.'
 url:                  http://connorbaer.io
@@ -53,12 +53,13 @@ social:
     - https://www.snapchat.com/add/connor_baer
 
 nav:
-  creating:           '/#creating'
-  writing:            '/#writing'
-  contact:            '/#contact'
+  1. about:           '/#about'
+  2. creating:        '/#creating'
+  3. writing:         '/#writing'
+  4. contact:         '/#contact'
 
 mobile: 
-  projects:           '/#creating'
+  about me:           '/#about'
 
 version:              3.0.5
 

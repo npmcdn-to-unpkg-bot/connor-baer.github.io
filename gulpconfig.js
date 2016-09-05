@@ -22,6 +22,7 @@ module.exports = {
   , notify: false // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
   , ui: false // Set to false if you don't need the browsersync UI
   , open: false // Set to false if you don't like the browser window opening automatically
+  , reloadDelay: 1000 // Time, in milliseconds, to wait before reloading/injecting
   , watchOptions: {
       debounceDelay: 2000 // This introduces a small delay when watching for file change events to avoid triggering too many reloads
     }

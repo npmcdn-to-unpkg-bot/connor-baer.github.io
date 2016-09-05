@@ -1,4 +1,14 @@
-// 404
+// ==== CONTENT ==== //
+
+/* Style the page and post content here. */
+
+/* 
+ * 1. 404
+ */
+
+
+
+// 1. 404 //
 
 .content-header {
 	padding-top: vr(6);
@@ -13,6 +23,6 @@
 }
 
 .link {
-	@include gradient-underline(90deg, gray, palette(gray, dark));
+	@include link-underline();
 	color: palette(gray, dark);
 }

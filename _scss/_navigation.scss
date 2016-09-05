@@ -1,3 +1,13 @@
+// ==== NAVIGATION ==== //
+
+/* Style the navigation here. */
+
+/* 
+ * 1. 
+ */
+
+
+
 .nav-large {
 	display: none;
 }
@@ -10,36 +20,19 @@
 	bottom: 9rem;
 	transform: rotate(90deg);
 	transform-origin: left bottom;
+	z-index: 100;
 }
 
 .nav-link {
 	@include font(header3);
 	color: palette(gray, dark);
-	position: relative;
-	z-index: 100;
-	transition: color $short;
-	&:before {
-	    background: linear-gradient(45deg, palette(pink), palette(orange));
-	    content: '';    
-	    display: block;
-	    height: 100%;
-	    position: absolute;
-	    top: 0; left: 0;
-	    opacity: 0;
-	    width: 100%;
-	    z-index: -100;
-	    transition: opacity $short;
-	}
-	&:hover,
-	&:focus {
-		color: #fff;
-		&:before {
-			opacity: 1;
-		}
+	transition: $short;
+	&:hover {
+		color: palette(pink);
 	}
 }
 
-@include mappy-query(desktop) {
+@include mappy-bp(small) {
 	.nav-small {
 		display: none;
 	}
@@ -47,15 +40,16 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		padding: vr(1) 0;
+		padding: 12px 0 16px;
 		display: block;
 		margin: 0 auto;
 		list-style: none;
 		text-align: center;
 		width: 100vw;
+		box-shadow: 0 0 1px 0 transparent;
 	}
 	.nav-item {
-		margin: 0 vr(.5);
+		margin: 0 vr(.75);
 		padding: 0;
 		display: inline-block;
 	}
@@ -65,8 +59,8 @@
 	}
 
 	.headroom--not-top .nav-large {
-		background-color: rgba(255, 255, 255, 0.9);
-		padding: vr(.5) 0;
+		box-shadow: 0 0 1px 0 palette(gray, light);
+		background-color: palette(white);
 	}
 
 	.headroom--pinned .nav-large {

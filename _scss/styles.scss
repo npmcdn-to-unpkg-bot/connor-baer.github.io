@@ -5,7 +5,7 @@
 
 /**
  * The order of the imports is crucial since they build on top of each other. 
- * For example, a form contains buttons, a menu can contain a form, etc.
+ * For example, a form contains buttons; a menu can contain a form, etc.
  * Note: `bower_components` and `npm_modules` are already in Sass's path.
  */
 
@@ -33,7 +33,7 @@
 /* Normalize: make browsers render things more consistently, from https://necolas.github.io/normalize.css/ */
 @import "normalize";
 
-/* Reset: a reset stylesheet to reduce browser inconsistencies, http://meyerweb.com/eric/tools/css/reset/ */
+/* Reset: a reset stylesheet to reduce browser inconsistencies, from http://meyerweb.com/eric/tools/css/reset/ */
 @import "reset";
 
 
@@ -51,7 +51,7 @@
 
 // 5. Sections //
 
-@import "social";
+@import "metabar";
 @import "navigation";
 @import "header";
 @import "section";
