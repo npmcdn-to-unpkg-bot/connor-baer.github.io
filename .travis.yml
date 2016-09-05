@@ -43,7 +43,7 @@ script:
     # Build the website.
     - bundle exec jekyll build
     # Run the website through htmlproofer.
-    - bundle exec htmlproofer ./_site
+    - bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
     # Run the website through JSHint.
     - jshint ./_site
     # Run the website through JavaScript Code Style checker.
