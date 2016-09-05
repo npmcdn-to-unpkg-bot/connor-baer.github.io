@@ -63,8 +63,8 @@ metabar: dark
 <section id="creating" class="section">
   <h2 class="section-title">2. Creating</h2>
   <div class="section-creating">
-    {% assign projects = site.data.projects | sort: 'order' %}
-    {% for project in projects | limit: 4 %}
+    {% assign projects = site.data.projects | sort: 'order' | limit: 4 %}
+    {% for project in projects %}
       <div class="section-project">
         <h3 class="section-header">{{ project.title }}</h3>
         <p class="section-body">{{ project.description }}</p>
@@ -77,7 +77,8 @@ metabar: dark
 <section id="writing" class="section">
   <h2 class="section-title">3. Writing</h2>
   <div class="section-writing">
-    {% for post in site.posts | limit: 3 %}
+    {% assign posts = site.posts | sort: 'order' | limit: 3 %}
+    {% for post in posts %}
     <article>
       <a href="https://blog.connorbaer.io/{{ post.medium }}" class="post-link" target="_blank" rel="noopener noreferrer">
         <h3 class="section-header">{{ post.title }}</h3>
