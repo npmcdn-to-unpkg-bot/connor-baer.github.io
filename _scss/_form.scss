@@ -20,7 +20,7 @@
 	text-decoration: none;
 	letter-spacing: 1px;
 	color: palette(orange);
-	display: block;
+	display: inline-block;
 	outline: none;
 	padding: vr(.25) vr(.5);
 	border: 2px solid palette(orange);
@@ -38,8 +38,7 @@
 
 // 2. Inputs //
 
-input, 
-textarea {
+.form-input {
 	@include font(app);
 	display: block;
 	padding: vr(.25);
@@ -106,8 +105,7 @@ textarea {
 
 /* Active state */
 
-input,
-textarea {
+.form-input {
 	/* Separate to help Firefox ignore :placeholder-shown */
 	&:not(:placeholder-shown) ~ .form-label {
 		color: palette(pink);
@@ -117,8 +115,7 @@ textarea {
 	}
 }
 
-input,
-textarea {
+.form-input {
 	&:focus ~ .form-label,
 	&:valid ~ .form-label {
 		color: palette(pink);
@@ -169,18 +166,15 @@ textarea {
 	right: 50%;
 }
 
-input,
-textarea {
+.form-input {
 
-	/* Active state */
+	/* Error state */
 
 	&:not(:focus):not(:placeholder-shown):invalid ~ .form-underline:before,
 	&:not(:focus):not(:placeholder-shown):invalid ~ .form-underline:after {
 		width: 50%;
 		background: red;
 	}
-
-	/* Error state */
 
 	&:focus ~ .form-underline:before,
 	&:focus ~ .form-underline:after {
@@ -204,8 +198,7 @@ textarea {
 
 /* Active state */
 
-input:focus ~ .form-highlight,
-textarea:focus ~ .form-highlight {
+.form-input:focus ~ .form-highlight {
   animation: inputHighlighter $long;
 }
 

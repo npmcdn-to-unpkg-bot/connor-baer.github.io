@@ -63,6 +63,13 @@
     a {
       color: palette(orange);
       @include link-underline();
+      &:after {
+        bottom: 4px;
+        background-color: transparent;
+      }
+      &:hover:after {
+        background-color: palette(pink);
+      }
     }
   }
   @else if $style == 'app' {

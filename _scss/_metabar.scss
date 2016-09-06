@@ -74,6 +74,7 @@
 .metabar-icon svg {
 	width: 44px;
 	height: 44px;
+	fill: palette(gray, dark);
 	transition: transform $short;
 	vertical-align: middle;
 	&:hover,
@@ -84,6 +85,15 @@
 
 
 .metabar-logo svg {
+	background-color: palette(white);
+	stop:first-child {
+		transition: stop-color $short;
+		stop-color: palette(pink);
+	}
+	stop:last-child {
+		transition: stop-color $short;
+		stop-color: palette(orange);
+	}
 	@include mappy-query(tablet) {
 		height: 29px;
 		width: 168px;
@@ -109,39 +119,31 @@
 
 /* Dark theme */
 
-#metabar.-dark {
-	.metabar-fingerprint svg,
-	.metabar-icon svg {
-		fill: palette(gray, dark);
+.headroom--top #metabar.-dark .metabar-logo svg {
+	stop:first-child {
+		stop-color: palette(gray, dark);
 	}
-
-	.metabar-logo svg {
-		background-color: palette(white);
-	}
-
-	.metabar-logo svg stop:first-child {
-		stop-color: palette(pink);
-	}
-
-	.metabar-logo svg stop:last-child {
-		stop-color: palette(orange);
+	stop:last-child {
+		stop-color: palette(gray, dark);
 	}
 }
 
 /* Light theme */
 
-#metabar.-light {
+.headroom--top #metabar.-light {
 	.metabar-fingerprint svg,
 	.metabar-icon svg {
 		fill: palette(white);
 	}
 	
-	.metabar-logo svg stop:first-child {
-		stop-color: palette(white);
-	}
-
-	.metabar-logo svg stop:last-child {
-		stop-color: palette(white);
+	.metabar-logo svg {
+		background-color: transparent;
+		stop:first-child {
+			stop-color: palette(white);
+		}
+		stop:last-child {
+			stop-color: palette(white);
+		}
 	}
 }
 

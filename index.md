@@ -2,7 +2,7 @@
 layout: default
 title: Made by Connor.
 image: '/assets/cloud.jpg'
-metabar: dark
+metabar: 
 ---
 
 <nav>
@@ -100,14 +100,14 @@ metabar: dark
    <h3 class="section-header">Get in touch!</h3>
   <form class="form" action="//formspree.io/hello@connorbaer.io" method="POST">
     <div class="form-group">
-      <input type="email" name="_replyto" placeholder=" " pattern="[^ @]*@[^ @]*\.[a-zA-Z]{2,}" required>
+      <input class="form-input" type="email" name="_replyto" placeholder=" " pattern="[^ @]*@[^ @]*\.[a-zA-Z]{2,}" required>
       <span class="form-highlight"></span>
       <span class="form-underline"></span>
       <label class="form-label" for="_replyto">What’s your email address?</label>
       <p class="form-error"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>Please enter a valid email address.</p>
     </div>
     <div class="form-group">
-      <textarea rows="3" name="message" placeholder=" " required></textarea>
+      <textarea class="form-input" rows="3" name="message" placeholder=" " required></textarea>
       <span class="form-highlight"></span>
       <span class="form-underline"></span>
       <label class="form-label" for="message">What can I do for you?</label>
