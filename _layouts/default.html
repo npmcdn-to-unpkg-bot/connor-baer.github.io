@@ -2,13 +2,14 @@
 <html lang="en">
 {% include head.html %}
 	<body>
-		<div class="site">
-		    {% include metabar.html metabar=page.metabar %}
-		    <article>
-				{{ content }}
-			</article>
+		<div class="body-wrapper">
+		    {% include metabar.html theme=page.theme %}
+
+			{{ content }}
+
 			{% include footer.html %}
 	    </div>
+
 	    {% include scripts.html %}
 	</body>
 </html>
