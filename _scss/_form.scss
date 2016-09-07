@@ -16,21 +16,23 @@
 
 .button {
 	@include font(app);
+
 	font-size: ms(-1);
 	text-decoration: none;
 	letter-spacing: 1px;
-	color: palette(orange);
+	color: palette($primary);
 	display: inline-block;
 	outline: none;
 	padding: vr(.25) vr(.5);
-	border: 2px solid palette(orange);
+	border: 2px solid palette($primary);
 	background-color: palette(white);
 	cursor: pointer;
 	transition: $short;
+
 	&:hover,
 	&:focus {
 		color: palette(white);
-		background-color: palette(orange);
+		background-color: palette($primary);
 	}
 }
 
@@ -40,6 +42,7 @@
 
 .form-input {
 	@include font(app);
+
 	display: block;
 	padding: vr(.25);
 	border: none;
@@ -54,7 +57,7 @@
 
 	&:focus {
 		outline: none;
-		background-color: palette(pink, lighter);
+		background-color: palette($primary, lighter);
 	}
 
 	/* Error state */
@@ -68,22 +71,44 @@ textarea {
 	resize: vertical;
 }
 
+select {
+	@include font(app);
+
+	font-size: ms(-1);
+	border: 1px solid palette(gray);
+	border-radius: 5px;
+	background: #fff;
+	padding: vr(.5);
+  	display: block;
+  	margin: vr(.25) 0;
+  	height: vr(1.25);
+  	outline: none;
+
+  	&:focus,
+	&:active {
+		box-shadow: 0px 0px 5px 1px palette($primary);
+
+	}
+}
+
 
 
 // 3. Labels //
 
 .form-group {
   position: relative;
-  margin-top: vr(1.75);
+  margin-top: vr(1.5);
   margin-bottom: vr(1);
 }
 
 .form-error {
 	@include font(app);
+
 	font-size: ms(-1);
 	display: none;
 	color: red;
 	transition: $short;
+
 	svg {
 		height: 18px;
 		width: 18px;
@@ -106,19 +131,9 @@ textarea {
 /* Active state */
 
 .form-input {
-	/* Separate to help Firefox ignore :placeholder-shown */
-	&:not(:placeholder-shown) ~ .form-label {
-		color: palette(pink);
-		font-size: ms(-1);
-		left: 0;
-		top: -#{vr(1)};
-	}
-}
-
-.form-input {
 	&:focus ~ .form-label,
 	&:valid ~ .form-label {
-		color: palette(pink);
+		color: palette($primary);
 		font-size: ms(-1);
 		left: 0;
 		top: -#{vr(1)};
@@ -132,8 +147,25 @@ textarea {
 
 	/* Error state */
 
+	&:not(:focus):not(:placeholder-shown):invalid ~ .form-label {
+		color: palette(red);
+	}
+
 	&:not(:focus):not(:placeholder-shown):invalid ~ .form-error {
 		display: inline-block;
+	}
+}
+
+/* Separated to help Firefox ignore :placeholder-shown */
+.form-input {
+	&:not(:placeholder-shown) ~ .form-label {
+		color: palette($primary);
+		font-size: ms(-1);
+		left: 0;
+		top: -#{vr(1)};
+	}
+	&:not(:placeholder-shown):not(:focus) ~ .form-label {
+		color: palette(gray);
 	}
 }
 
@@ -152,9 +184,9 @@ textarea {
 	content: '';
 	height: 2px;
 	width: 0;
-	bottom: 1px;
+	bottom: 0;
 	position: absolute;
-	background: palette(pink);
+	background: palette($primary);
 	transition: $short;
 }
 
@@ -191,7 +223,7 @@ textarea {
 	height: vr(1.5);
 	width: 33%;
 	top: 0;
-	left: vr(.25);
+	left: 0;
 	pointer-events: none;
 	opacity: 0.33;
 }
@@ -206,7 +238,7 @@ textarea {
 
 @keyframes inputHighlighter {
 	from {
-		background: palette(pink, light);
+		background: palette($secondary, light);
 	}
 	to {
 		width: 0;

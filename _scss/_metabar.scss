@@ -3,23 +3,15 @@
 /* Style the metabar here. */
 
 /**
- * 1. Colors
- * 2. Container
- * 3. Elements
- * 4. Themes
- * 5. Headroom
+ * 1. Container
+ * 2. Elements
+ * 3. Themes
+ * 4. Headroom
  */
 
 
 
-// 1. Colors //
-
-$text-dark: palette(gray, dark);
-$text-light: palette(white);
-
-
-
-// 2. Container //
+// 1. Container //
 
 .metabar-outer {
 	@include ctnr(full);
@@ -41,7 +33,7 @@ $text-light: palette(white);
 
 
 
-// 3. Elements //
+// 2. Elements //
 
 .metabar-left, 
 .metabar-right {
@@ -83,7 +75,7 @@ $text-light: palette(white);
 .metabar-icon svg {
 	width: 44px;
 	height: 44px;
-	fill: $text-dark;
+	fill: palette(gray, dark);
 	transition: transform $short;
 	vertical-align: middle;
 
@@ -94,16 +86,16 @@ $text-light: palette(white);
 }
 
 .metabar-logo svg {
-	background-color: $text-light;
+	background-color: palette(white);
 
 	stop:first-child {
 		transition: stop-color $short;
-		stop-color: palette(pink);
+		stop-color: palette($secondary);
 	}
 
 	stop:last-child {
 		transition: stop-color $short;
-		stop-color: palette(orange);
+		stop-color: palette($primary);
 	}
 
 	@include mappy-query(tablet) {
@@ -129,17 +121,17 @@ $text-light: palette(white);
 
 
 
-// 4. Themes //
+// 3. Themes //
 
 /* Dark theme */
 
 .headroom--top #metabar.-dark .metabar-logo svg {
 	stop:first-child {
-		stop-color: $text-dark;
+		stop-color: palette(gray, dark);
 	}
 
 	stop:last-child {
-		stop-color: $text-dark;
+		stop-color: palette(gray, dark);
 	}
 }
 
@@ -148,25 +140,25 @@ $text-light: palette(white);
 .headroom--top #metabar.-light {
 	.metabar-fingerprint svg,
 	.metabar-icon svg {
-		fill: $text-light;
+		fill: palette(white);
 	}
 	
 	.metabar-logo svg {
 		background-color: transparent;
 
 		stop:first-child {
-			stop-color: $text-light;
+			stop-color: palette(white);
 		}
 
 		stop:last-child {
-			stop-color: $text-light;
+			stop-color: palette(white);
 		}
 	}
 }
 
 
 
-// 5. Headroom //
+// 4. Headroom //
 
 .headroom #metabar {
   	position: fixed;

@@ -3,23 +3,15 @@
 /* Style the navigation here. */
 
 /**
- * 1. Variables
- * 2. Container
- * 3. Elements
- * 4. Themes
- * 5. Headroom
+ * 1. Container
+ * 2. Elements
+ * 3. Themes
+ * 4. Headroom
  */
 
 
 
-// 1. Variables //
-
-$text-dark: palette(gray, dark);
-$text-light: palette(white);
-
-
-
-// 2. Container //
+// 1. Container //
 
 .navigation-large {
 	display: none;
@@ -58,13 +50,13 @@ $text-light: palette(white);
 
 
 
-// 3. Elements //
+// 2. Elements //
 
 .navigation-link {
 	@include font(header3);
 	@include link-underline();
 	
-	color: $text-dark;
+	color: palette(gray, dark);
 	transition: $short;
 
 	&:after {
@@ -73,11 +65,11 @@ $text-light: palette(white);
 	}
 
 	&:hover {
-		color: $text-dark;
+		color: palette(gray, dark);
 	}
 
 	&:hover:after {
-		background-color: $text-dark;
+		background-color: palette(gray, dark);
 	}
 }
 
@@ -92,21 +84,21 @@ $text-light: palette(white);
 
 
 
-// 4. Themes //
+// 3. Themes //
 
 /* Light theme */
 
 .headroom--top #navigation.-light .navigation-link {
-	color: $text-light;
+	color: palette(white);
 
 	&:hover:after {
-		background-color: $text-light;
+		background-color: palette(white);
 	}
 }
 
 
 
-// 5. Headroom //
+// 4. Headroom //
 
 @include mappy-bp(small) {
 
