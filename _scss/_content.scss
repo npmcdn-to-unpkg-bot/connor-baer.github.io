@@ -2,13 +2,11 @@
 
 /* Style the page and post content here. */
 
-/* 
- * 1. 404
- */
 
 
 .content-header {
 	@include ctnr(golden);
+
 	padding-top: vr(6);
 	padding-bottom: vr(2);
 }
@@ -19,11 +17,13 @@
 	width: 25%;
 	height: 25%;
 	fill: url(#icon-gradient);
+
 	stop:first-child {
-		stop-color: palette(pink);
+		stop-color: palette($secondary);
 	}
+	
 	stop:last-child {
-		stop-color: palette(orange);
+		stop-color: palette($primary);
 	}
 }
 
