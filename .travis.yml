@@ -38,8 +38,6 @@ before_script:
 script: 
     #!/usr/bin/env bash
 
-    # halt script on error
-    - set -e 
     # Build the website.
     - bundle exec jekyll build
     # Run the website through htmlproofer.
