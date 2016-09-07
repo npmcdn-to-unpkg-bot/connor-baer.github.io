@@ -1,24 +1,31 @@
 // HEADROOM //
 
-// grab an element
+// Grab an element.
 var hrBody = document.body;
-// construct an instance of Headroom, passing the element
-var headroom  = new Headroom(hrBody, {
-    // vertical offset in px before element is first unpinned
+
+// Construct an instance of Headroom, passing the element.
+var headroom  = new Headroom( hrBody, {
+
+    // Vertical offset in px before element is first unpinned.
     offset: 64,
-    // scroll tolerance in px before state changes for up/down scroll
+
+    // Scroll tolerance in px before state changes for up/down scroll.
     tolerance: {
         up: 10,
         down: 5
     }
 });
 
+// Initialise.
+headroom.init();
 
 // SMOOTHSCROLL //
 
-// initialise
-headroom.init();
-
 smoothScroll.init({
-	easing: 'easeInOutCubic', // Easing pattern to use
+
+	// Easing pattern to use.
+	easing: 'easeInOutCubic',
+
+	// How far to offset the scrolling anchor location in pixels.
+	offset: 70
 });

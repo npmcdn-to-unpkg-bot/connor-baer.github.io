@@ -1,11 +1,11 @@
 // ==== UPDATE ==== //
 
-var gulp = require('gulp')
-  , update = require('gulp-update');
-
+var gulp    = require('gulp')
+  , plugins = require('gulp-load-plugins')({ camelize: true })
+;
 
 gulp.task('update', function () {
   gulp.watch('./package.json').on('change', function (file) {
-    update.write(file);
+    plugins.update.write(file);
   });
 });

@@ -1,6 +1,17 @@
 // ==== LAYOUT ==== //
 
-/* Simple mixin to clear floats. */
+/* Define all global layouts and layout styles here. */
+
+/* 
+ * 1. Clearfix
+ * 2. Layouts
+ * 3. Helpers
+ */
+
+
+
+// 1. Clearfix //
+
 @mixin clearfix {
   &:after {
     content: "";
@@ -9,6 +20,10 @@
   }
 }
 
+
+
+// 2. Layouts //
+
 /* Content can take on three different widths: full, wide and golden. */
 @mixin ctnr($width: null) {
   @if $width == null {
@@ -16,11 +31,11 @@
   }
   @else if $width == 'golden' {
     width: auto;
-    margin-right: vr(1);
-    margin-left: vr(1);
+    padding-right: vr(1);
+    padding-left: vr(1);
     display: block;
     @include mappy-query(desktop) {
-      width: 36rem;
+      width: 38rem;
       max-width: 100%;
       margin-right: auto;
       margin-left: auto;
@@ -28,16 +43,14 @@
   }
   @else if $width == 'wide' {
     width: 100%;
-    margin-right: vr(1);
-    margin-left: vr(1);
+    padding-right: vr(1);
+    padding-left: vr(1);
     display: block;
     @include mappy-query(desktop) {
-      width: 64rem;
+      width: 56rem;
       max-width: 100%;
       margin-right: auto;
       margin-left: auto;
-      padding-right: vr(1);
-      padding-left: vr(1);
     }
   }
   @else if $width == 'full' {
@@ -51,19 +64,11 @@
 }
 
 
+
+// 3. Helpers //
+
 /* Limits width on large screens and centers content. */
 .site {
   max-width: 72rem;
   margin: 0 auto;
-}
-
-/* Content can take on three different widths: full, wide and golden. */
-.ctnr-full {
-  @include ctnr(full);
-}
-.ctnr-wide {
-  @include ctnr(wide);
-}
-.ctnr-golden {
-  @include ctnr(golden);
 }

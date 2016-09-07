@@ -1,18 +1,65 @@
+// ==== SECTION ==== //
+
+/* Style the homepage sections here. */
+
+/* 
+ * 1. General
+ * 2. Creating
+ * 3. Writing
+ * 4. Contact
+ */
+
+
+
+// 1. General //
+
 .section {
 	@include ctnr(golden);
-	margin-bottom: vr(2);
+	margin-bottom: vr(3);
 }
 
 .section-title {
 	@include font(header3);
-	color: #fff;
-	display: inline-block;
-    margin-top: vr(1);
-	margin-bottom: vr(.5);
-    background: linear-gradient(45deg, palette(pink), palette(orange));
+	color: palette(pink);
 }
 
-.section-creating, .section-inputs {
+h1.section-header {
+	@include font(header1);
+}
+
+h3.section-header {
+	@include font(header2);
+}
+
+.section-body {
+	@include font(body);
+}
+
+.section-link {
+	@include link-underline();
+	color: palette(orange);
+	&:after {
+		background-color: palette(orange);
+	}
+	&:hover:after {
+		background-color: palette(pink);
+	}
+	&.-large {
+      font-size: ms(1);
+    }
+}
+
+@include mappy-bp(small) {
+	.section {
+		margin-bottom: vr(4);
+	}
+}
+
+
+
+// 2. Creating //
+
+.section-creating {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -22,41 +69,29 @@
 .section-project {
 	margin-bottom: vr(1);
 	width: 100%;
+	@include mappy-bp(small) {
+		&:last-child,
+		&:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+	}
 }
 
-h1.section-header {
-	@include font(header1);
+@include mappy-bp(small) {
+	.section-project {
+		width: 45%;
+	}
 }
 
-h2.section-header {
-	@include font(header2);
-}
 
-.section-body {
-	@include font(body);
-}
 
-.section-link {
-	@include gradient-underline(90deg, orange, palette(orange));
-	&.large {
-      font-size: ms(1);
-    }
-}
-
-.section-input {
-	width: 100%;
-}
+// 3. Writing //
 
 .section-post {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: flex-start;
-}
-
-.post-header {
-	@include gradient-underline(90deg, gray, palette(gray, dark));
-	color: palette(gray, dark);
 }
 
 .post-body {
@@ -73,8 +108,7 @@ h2.section-header {
 }
 
 .post-medium {
-	margin-top: vr(1);
-	margin-bottom: vr(1);
+	margin-top: vr(.75);
 	display: inline-block;
 }
 
@@ -91,18 +125,10 @@ h2.section-header {
 	}
 }
 
-@include mappy-bp(small) {
-	.section {
-		margin-bottom: vr(3);
-	}
 
-	.section-project {
-		width: 45%;
-	}
-}
 
-@include mappy-query(desktop) {
-	.section-input {
-		width: 45%;
-	}
+// 4. Contact //
+
+.section-input {
+	width: 100%;
 }

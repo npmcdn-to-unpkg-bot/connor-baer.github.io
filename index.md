@@ -2,14 +2,17 @@
 layout: default
 title: Made by Connor.
 image: '/assets/cloud.jpg'
+metabar: 
 ---
 
 <nav>
   {% include navigation.html %}
 </nav> 
-<header>
-  <div class="header" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
-    <svg class="header-large" viewBox="0 0 450 75">
+
+<header class="header">
+  <div class="header-background" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
+    <svg class="header-large" viewBox="0 0 450 75" role="img" aria-labelledby="aria-header-large">
+      <title id="aria-header-large">Made by Connor. - Logo</title>
       <defs>
         <g id="text-large">
           <text class="header-text" text-anchor="middle" x="225" y="55">Made by Connor.</text>
@@ -22,7 +25,8 @@ image: '/assets/cloud.jpg'
       <rect x="0" y="0" width="450" height="75" mask="url(#mask-large)" fill="white" fill-opacity="1"/>
       <use xlink:href="#text-large" mask="url(#mask-large)" />
     </svg>
-    <svg class="header-small" viewBox="0 0 245 150">
+    <svg class="header-small" viewBox="0 0 245 150" aria-labelledby="aria-header-small">
+      <title id="aria-header-small">Made by Connor. - Logo</title>
       <defs>
         <g id="text-top">
           <text class="header-text" x="15" y="53">Made by</text>
@@ -47,67 +51,70 @@ image: '/assets/cloud.jpg'
   </div>
 </header>
 
-<!-- <section id="about" class="section">
-  <h3 class="section-title">About</h3>
+<section id="about" class="section">
+  <h2 class="section-title">1. About Me</h2>
   <article>
-    <h1 class="section-header">I love people who love making things… and sushi!</h1>
-    <h4 class="section-body large">{{ site.tagline }}</h4>
-    <a class="section-link" href="/process">Learn about my work process →</a>
+    <h1 class="section-header">Problem solving is my passion.</h1>
+    <p class="section-body -large">{{ site.tagline }}</p>
+    <a class="section-link -large" href="#contact" data-scroll>Let's create solutions together</a>
   </article>
-</section> -->
+</section>
 
 <section id="creating" class="section">
-  <h3 class="section-title">creating</h3>
+  <h2 class="section-title">2. Creating</h2>
   <div class="section-creating">
-    {% assign projects = site.data.projects | sort: 'order' %}
+    {% assign projects = site.data.projects | sort: 'order' | limit: 4 %}
     {% for project in projects %}
       <div class="section-project">
-        <h2 class="section-header">{{ project.title }}</h2>
+        <h3 class="section-header">{{ project.title }}</h3>
         <p class="section-body">{{ project.description }}</p>
-        <a href="{{ project.url }}" class="section-link" target="_blank">{{ project.cta }} →</a>
+        <a href="{{ project.url }}" class="section-link" target="_blank" rel="noopener noreferrer">{{ project.cta }}</a>
       </div>
     {% endfor %}
   </div>
 </section>
 
 <section id="writing" class="section">
-  <h3 class="section-title">Writing</h3>
+  <h2 class="section-title">3. Writing</h2>
   <div class="section-writing">
-    {% for post in site.posts | limit: 3 %}
+    {% assign posts = site.posts | sort: 'order' | limit: 3 %}
+    {% for post in posts %}
     <article>
-      <a href="{{ post.medium }}" class="post-link" target="_blank">
-        <h2 class="section-header post-header">{{ post.title }}</h2>
+      <a href="https://blog.connorbaer.io/{{ post.medium }}" class="post-link" target="_blank" rel="noopener noreferrer">
+        <h3 class="section-header">{{ post.title }}</h3>
         <div class="section-post">
-          <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 30 }}</p>
-          {% if post.thumb %}
-          <div class="post-image" style="background-image: url('{{ site.baseurl }}{{ post.thumb }}')"></div>
+          <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 28 }}</p>
+          {% if post.image %}
+          <div class="post-image" style="background-image: url('{{ site.baseurl }}/img/{{ post.image }}-thumb.jpg')"></div>
           {% endif %}
         </div>
       </a>
     </article>
     {% endfor %}
   </div>
-  <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank">Read more on Medium →</a>
+  <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank" rel="noopener noreferrer">Read more on Medium</a>
 </section>
 
 <section id="contact" class="section">
-  <h3 class="section-title">Contact</h3>
-  <form action="//formspree.io/hello@connorbaer.io" method="POST">
-    <div class="section-inputs">
-      <div class="section-input">
-        <label for="name">What’s your name?</label>
-        <input type="text" name="name" placeholder="Jane" required>
-      </div>
-      <div class="section-input">
-        <label for="_replyto">What’s your email address?</label>
-        <input type="email" name="_replyto" placeholder="jane@example.com" required pattern="[^ @]*@[^ @]*\.[a-zA-Z]{2,}">
-      </div>
+  <h2 class="section-title">4. Contact</h2>
+   <h3 class="section-header">Get in touch!</h3>
+  <form class="form" action="//formspree.io/hello@connorbaer.io" method="POST">
+    <div class="form-group">
+      <input class="form-input" type="email" name="_replyto" placeholder=" " pattern="[^ @]*@[^ @]*\.[a-zA-Z]{2,}" required>
+      <span class="form-highlight"></span>
+      <span class="form-underline"></span>
+      <label class="form-label" for="_replyto">What’s your email address?</label>
+      <p class="form-error"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>Please enter a valid email address.</p>
     </div>
-    <label for="message">What can I do for you?</label>
-    <textarea rows="4" name="message" placeholder="Hi Connor! I have a question…" required></textarea>
-    <input type="hidden" name="_subject" value="Someone wants to say hello" />
+    <div class="form-group">
+      <textarea class="form-input" rows="3" name="message" placeholder=" " required></textarea>
+      <span class="form-highlight"></span>
+      <span class="form-underline"></span>
+      <label class="form-label" for="message">What can I do for you?</label>
+    </div>
+    <input type="hidden" name="_subject" value="Form submission on connorbaer.io" />
     <input type="hidden" name="_next" value="//connorbaer.io/success/" />
     <input type="text" name="_gotcha" style="display:none" />
-    <button class="section-link button" type="submit">Send and smile →</button>
+    <button class="button" type="submit">Send message →</button>
   </form>
 </section>

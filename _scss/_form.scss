@@ -1,28 +1,66 @@
-label {
-	display: block;
-	margin-top: vr(1);
+// ==== FORM ==== //
+
+/* Style all form components here. */
+
+/* 
+ * 1. Buttons
+ * 2. Inputs
+ * 3. Labels
+ * 4. Underline
+ * 5. Highlight
+ */
+
+
+
+// 1. Buttons //
+
+.button {
+	@include font(app);
+	font-size: ms(-1);
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: palette(orange);
+	display: inline-block;
+	outline: none;
+	padding: vr(.25) vr(.5);
+	border: 2px solid palette(orange);
+	background-color: palette(white);
+	cursor: pointer;
+	transition: $short;
+	&:hover,
+	&:focus {
+		color: palette(white);
+		background-color: palette(orange);
+	}
 }
 
-input, textarea {
-	@include font(body);
-	padding: vr(.25) vr(.75);
-	border: 1px solid palette(gray, light);
-	background-color: #fff;
-	outline: none;
-	margin: vr(.5) 0;
-	width: 100%;
-	text-align: left;
+
+
+// 2. Inputs //
+
+.form-input {
+	@include font(app);
+	display: block;
+	padding: vr(.25);
+	border: none;
+	border-bottom: 2px solid palette(gray, light);
+	background-color: palette(gray, lighter);
 	width: 100%;
 	resize: none;
-	transition: border $short, box-shadow $short;
-	&:focus,
-	&:active,
-	&:hover {
-		border: 1px solid palette(orange);
+	outline: none;
+	transition: background-color $short;
+
+	/* Active state */
+
+	&:focus {
+		outline: none;
+		background-color: palette(pink, lighter);
 	}
-	&:focus,
-	&:active {
-		box-shadow: 0px 0px 5px 1px palette(orange, light);
+
+	/* Error state */
+
+	&:not(:focus):not(:placeholder-shown):invalid {
+		background-color: palette(red, lighter);
 	}
 }
 
@@ -30,12 +68,148 @@ textarea {
 	resize: vertical;
 }
 
-.button {
+
+
+// 3. Labels //
+
+.form-group {
+  position: relative;
+  margin-top: vr(1.75);
+  margin-bottom: vr(1);
+}
+
+.form-error {
+	@include font(app);
+	font-size: ms(-1);
+	display: none;
+	color: red;
+	transition: $short;
+	svg {
+		height: 18px;
+		width: 18px;
+		margin-right: 6px;
+		vertical-align: middle;
+		fill: currentColor;
+	}
+}
+
+.form-label {
+	@include font(app);
+	color: palette(gray, light);
+	position: absolute;
+	pointer-events: none;
+	top: vr(.25);
+	left: vr(.25);
+	transition: $short;
+}
+
+/* Active state */
+
+.form-input {
+	/* Separate to help Firefox ignore :placeholder-shown */
+	&:not(:placeholder-shown) ~ .form-label {
+		color: palette(pink);
+		font-size: ms(-1);
+		left: 0;
+		top: -#{vr(1)};
+	}
+}
+
+.form-input {
+	&:focus ~ .form-label,
+	&:valid ~ .form-label {
+		color: palette(pink);
+		font-size: ms(-1);
+		left: 0;
+		top: -#{vr(1)};
+	}
+
+	/* Valid state */
+
+	&:not(:focus) ~ .form-label {
+		color: palette(gray);
+	}
+
+	/* Error state */
+
+	&:not(:focus):not(:placeholder-shown):invalid ~ .form-error {
+		display: inline-block;
+	}
+}
+
+
+
+// 4. Underline //
+
+.form-underline {
+	position: relative;
 	display: block;
-	outline: none;
-	border: none;
-	font-family: $sans;
-	padding: 0;
-	text-decoration: none;
-	background-color: #fff;
+	width: 100%;
+}
+
+.form-underline:before,
+.form-underline:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: palette(pink);
+	transition: $short;
+}
+
+.form-underline:before {
+	left: 50%;
+}
+
+.form-underline:after {
+	right: 50%;
+}
+
+.form-input {
+
+	/* Error state */
+
+	&:not(:focus):not(:placeholder-shown):invalid ~ .form-underline:before,
+	&:not(:focus):not(:placeholder-shown):invalid ~ .form-underline:after {
+		width: 50%;
+		background: red;
+	}
+
+	&:focus ~ .form-underline:before,
+	&:focus ~ .form-underline:after {
+		width: 50%;
+	}
+}
+
+
+
+// 5. Highlighter //
+
+.form-highlight {
+	position: absolute;
+	height: vr(1.5);
+	width: 33%;
+	top: 0;
+	left: vr(.25);
+	pointer-events: none;
+	opacity: 0.33;
+}
+
+/* Active state */
+
+.form-input:focus ~ .form-highlight {
+  animation: inputHighlighter $long;
+}
+
+/* Animations */
+
+@keyframes inputHighlighter {
+	from {
+		background: palette(pink, light);
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
 }

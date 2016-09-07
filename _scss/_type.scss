@@ -1,5 +1,16 @@
 // ==== TYPOGRAPHY ==== //
 
+/* Define all global font styles here. */
+
+/* 
+ * 1. font()
+ * 2. Global styles
+ */
+
+
+
+// 1. font() //
+
 /* 
  * The font() function accepts a style parameter.
  * It is intended to promote consistency in the typography, 
@@ -19,17 +30,17 @@
   }
   @else if $style == 'header1' {
     font-weight: $sans-bold;
-    font-size: ms(3);
-    line-height: 1.2;
+    font-size: ms(4);
     color: palette(gray, darker);
-    margin-top: vr(1);
+    line-height: 1.2;
+    margin-top: vr(.75);
     margin-bottom: vr(.5);
   }
   @else if $style == 'header2' {
     font-weight: $sans-bold;
     font-size: ms(2);
-    line-height: 1.2;
     color: palette(gray, darker);
+    line-height: 1.2;
     margin-top: vr(1);
     margin-bottom: vr(.5);
   }
@@ -38,7 +49,6 @@
     font-weight: $sans-bold;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    padding: .1rem vr(.5);
   }
   @else if $style == 'body' {
     font-family: $serif;
@@ -46,13 +56,32 @@
     font-size: ms(0);
     line-height: 1.75;
     margin-top: 0;
-    margin-bottom: 1rem;
-    &.large {
+    margin-bottom: vr(.5);
+    &.-large {
       font-size: ms(1);
     }
     a {
       color: palette(orange);
-      @include gradient-underline(90deg, orange, palette(orange));
+      @include link-underline();
+      &:after {
+        bottom: 4px;
+        background-color: transparent;
+      }
+      &:hover:after {
+        background-color: palette(pink);
+      }
+    }
+  }
+  @else if $style == 'app' {
+    font-family: $sans;
+    font-weight: $sans-normal;
+    font-size: ms(0);
+    &.-large {
+      font-size: ms(1);
+    }
+    a {
+      color: palette(orange);
+      @include link-underline();
     }
   }
   @else {
@@ -63,20 +92,13 @@
 }
 
 
+
+// 2. Global styles //
+
 a {
   border: 0;
   color: inherit;
   text-decoration: none;
-}
-
-.caps:before { 
-  float: left; 
-  color: palette(orange); 
-  font-size: 4.4rem; 
-  line-height: 1; 
-  padding: 0 0.5rem 0 0.25rem; 
-  font-family: $serif;
-  content: attr(alt);
 }
 
 strong,
@@ -125,8 +147,7 @@ acronym {
   cursor: help;
 }
 
-mark,
-ins {
+mark {
   background: palette(orange, light);
   color: #fff;
   padding: 0.125em 0.25em;

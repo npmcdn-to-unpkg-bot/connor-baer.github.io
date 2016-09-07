@@ -1,12 +1,13 @@
 // ==== LIBRARY ==== //
 
-/* Mixins, functions, and other non-declarative things */
+/* Define mixins, functions, and other non-declarative things here. */
 
 /*
  * 1. Settings
  * 2. Gradients
  * 3. Borders, Underlines & Overlays
  */
+
 
 
 // 1. Settings //
@@ -58,32 +59,19 @@ $border-grey: $border-gray;
   }
 }
 
-@mixin gradient-underline($direction, $color, $color-stops...) {
+@mixin link-underline() {
   position: relative;
   z-index: 1;
-  color: palette($color);
   display: inline-block;
-  transition: color $short;
   cursor: pointer;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     z-index: -1;
-    background-color: nth($color-stops, 1);
-    background-image: gradient($direction, $color-stops);
-    visibility: hidden;
-    transform: translate(0px,3px);
-    opacity: 0;
-    backface-visibility: hidden;
-    transition: visibility $short, opacity $short, transform $short;
-  }
-  &:hover:after {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0px,-1px);
+    transition: $short;
   }
 }

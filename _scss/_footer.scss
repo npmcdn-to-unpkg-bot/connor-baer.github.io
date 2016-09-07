@@ -1,3 +1,7 @@
+// ==== FOOTER ==== //
+
+/* Style the footer here. */
+
 .footer {
 	@include ctnr(golden);
 	padding-top: vr(1);
@@ -8,8 +12,4 @@
 	@include font(header3);
 	text-align: center;
 	color: palette(gray);
-	a {
-		@include gradient-underline(90deg, gray, palette(gray));
-		color: palette(gray);
-	}
 }
