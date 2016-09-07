@@ -1,16 +1,14 @@
 ---
 layout: default
 title: Made by Connor.
-image: '/assets/cloud.jpg'
-metabar: 
+image: 'cloud'
+theme: 
 ---
 
-<nav>
-  {% include navigation.html %}
-</nav> 
+{% include navigation.html theme=page.theme %}
 
 <header class="header">
-  <div class="header-background" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
+  <div class="header-background" style="background-image: url('{{ site.baseurl }}/img/{{ page.image }}.jpg')">
     <svg class="header-large" viewBox="0 0 450 75" role="img" aria-labelledby="aria-header-large">
       <title id="aria-header-large">Made by Connor. - Logo</title>
       <defs>
