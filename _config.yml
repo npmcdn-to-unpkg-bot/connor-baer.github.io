@@ -65,20 +65,28 @@ nav:
 mobile: 
   about me:           '/#about'
 
-collections: 
+collections:
   projects:
     output: true
-    permalink: /creating/:title/
+  recipes:
+    output: true
 
 defaults:
-  - scope:
-      path: ''
-      type: projects
-    values:
-      layout: page
   - scope:
       path: ''
       type: posts
     values:
       layout: post
       permalink: /writing/:title/
+  - scope:
+      path: ''
+      type: projects
+    values:
+      layout: page
+      permalink: /creating/:title/
+  - scope:
+      path: ''
+      type: recipes
+    values:
+      layout: recipe
+      permalink: /cooking/:title/
