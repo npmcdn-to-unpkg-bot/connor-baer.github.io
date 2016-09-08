@@ -61,7 +61,7 @@ theme:
 <section id="creating" class="section">
   <h2 class="section-title">2. Creating</h2>
   <div class="section-creating">
-    {% assign projects = site.data.projects | sort: 'order' | limit: 4 %}
+    {% assign projects = site.projects | sort: 'date' | reverse | limit: 4 %}
     {% for project in projects %}
       <div class="section-project">
         <h3 class="section-header">{{ project.title }}</h3>
@@ -75,19 +75,19 @@ theme:
 <section id="writing" class="section">
   <h2 class="section-title">3. Writing</h2>
   <div class="section-writing">
-    {% assign posts = site.posts | sort: 'order' | limit: 3 %}
+    {% assign posts = site.posts | sort: 'date' | reverse | limit: 3 %}
     {% for post in posts %}
-    <article>
-      <a href="https://blog.connorbaer.io/{{ post.medium }}" class="post-link" target="_blank" rel="noopener noreferrer">
-        <h3 class="section-header">{{ post.title }}</h3>
-        <div class="section-post">
-          <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 28 }}</p>
-          {% if post.image %}
-          <div class="post-image" style="background-image: url('{{ site.baseurl }}/img/{{ post.image }}-thumb.jpg')"></div>
-          {% endif %}
-        </div>
-      </a>
-    </article>
+      <article>
+        <a href="https://blog.connorbaer.io/{{ post.link }}" class="post-link" target="_blank" rel="noopener noreferrer">
+          <h3 class="section-header">{{ post.title }}</h3>
+          <div class="section-post">
+            <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 28 }}</p>
+            {% if post.image %}
+            <div class="post-image" style="background-image: url('{{ site.baseurl }}/img/{{ post.image }}-thumb.jpg')"></div>
+            {% endif %}
+          </div>
+        </a>
+      </article>
     {% endfor %}
   </div>
   <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank" rel="noopener noreferrer">Read more on Medium</a>
