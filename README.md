@@ -6,4 +6,6 @@ Write proper README file.
 
 # To do
 
- - [ ] Add article pages.
+ - [ ] Style article pages.
+ - [ ] Add cooking section.
+ - [ ] Add section pages.

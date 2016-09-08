@@ -66,7 +66,7 @@ theme:
       <div class="section-project">
         <h3 class="section-header">{{ project.title }}</h3>
         <p class="section-body">{{ project.description }}</p>
-        <a href="{{ project.url }}" class="section-link" target="_blank" rel="noopener noreferrer">{{ project.cta }}</a>
+        <a href="{{ project.link }}" class="section-link" target="_blank" rel="noopener noreferrer">{{ project.cta }}</a>
       </div>
     {% endfor %}
   </div>
