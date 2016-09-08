@@ -24,7 +24,7 @@ module.exports = {
   , open: false // Set to false if you don't like the browser window opening automatically
   , reloadDelay: 1000 // Time, in milliseconds, to wait before reloading/injecting
   , watchOptions: {
-      debounceDelay: 2000 // This introduces a small delay when watching for file change events to avoid triggering too many reloads
+      debounceDelay: 8000 // This introduces a small delay when watching for file change events to avoid triggering too many reloads
     }
   },
 

@@ -1,8 +1,6 @@
 ---
-layout: post
 title: This is the Europe I am proud of.
-medium: 'this-is-the-europe-i-am-proud-of-a96fb3847ae3'
-metabar: dark
+link: 'this-is-the-europe-i-am-proud-of-a96fb3847ae3'
 ---
 
 I am in tears. Finally (!) Austria and Germany show some compassion and welcome refugees. The outpouring of support for refugees is humbling. “By Saturday afternoon, officials in Vienna had to ask people to stay away from the train station, which was heavily overcrowded with well-wishers bearing donations.” ([The Guardian](https://www.theguardian.com/world/2015/sep/05/refugee-crisis-warm-welcome-for-people-bussed-from-budapest))

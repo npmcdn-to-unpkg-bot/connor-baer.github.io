@@ -23,6 +23,7 @@
 	@include font(header3);
 
 	color: palette($secondary);
+	margin-bottom: vr(.75);
 }
 
 h1.section-header {

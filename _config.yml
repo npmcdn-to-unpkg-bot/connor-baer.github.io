@@ -49,6 +49,13 @@ social:
     - https://medium.com/@connor_baer
     - https://www.snapchat.com/add/connor_baer
 
+version:              3.0.5
+
+github:
+  repo:               https://github.com/connor-baer/connor-baer.github.io
+
+
+# Content
 nav:
   1. about:           '/#about'
   2. creating:        '/#creating'
@@ -58,7 +65,20 @@ nav:
 mobile: 
   about me:           '/#about'
 
-version:              3.0.5
+collections: 
+  projects:
+    output: true
+    permalink: /creating/:title/
 
-github:
-  repo:               https://github.com/connor-baer/connor-baer.github.io
+defaults:
+  - scope:
+      path: ''
+      type: projects
+    values:
+      layout: page
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      permalink: /writing/:title/

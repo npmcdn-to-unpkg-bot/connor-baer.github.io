@@ -1,9 +1,7 @@
 ---
-layout: post
 title: “Nobody has the intention of building an airport!”*
 image: 'airport'
-medium: 'nobody-has-the-intention-of-building-an-airport-f22b641be67f'
-metabar: dark
+link: 'nobody-has-the-intention-of-building-an-airport-f22b641be67f'
 ---
 
 Those were the words that passed through my mind when I got on the impossibly crowded bus to Berlin Tegel airport. I’ve never seen so many people unintentionally hugging each other. I started to fully understand the tragedy behind the disaster that some people call [Berlin Brandenburg Airport](http://www.berlin-airport.de/en/index.php). Not only did I understand it, I could also feel it painfully in the form of an elbow in my back.
